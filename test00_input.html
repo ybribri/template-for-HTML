@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template literals for HTML</title>
+    <script src="./js/etemplate.min.js"></script>
+</head>
+
+<body>
+    <div class="main_wrapper">
+        <input id="input1" type="number" value="<%= input_no %>" data-sync="input_no">
+        <ul>
+            <% for(i=0; i<input_no; i++) { %>
+                <li><%= data %></li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+
+<script>
+    let input_no=1;
+    let data="<span>hello world!!</span>";
+
+    function addListener() {
+        document.querySelector('#input1').addEventListener('input', (event) => {
+            let number=(event.target.valueAsNumber);
+            if (number<1) {
+                data='no hello?';
+                event.target.valueAsNumber=1;
+                document.querySelector('ul').style.color="red";
+            } else if (number>10) {
+                data='too many hello';
+                event.target.valueAsNumber=10;
+                document.querySelector('ul').style.color="red";
+            } else {
+                data='Hello World!';
+                document.querySelector('ul').style.color="black";
+            }
+            syncTemplate(event);
+        })
+    }
+    
+    eTemplate(); 
+    
+</script>
+
+
+</html>
