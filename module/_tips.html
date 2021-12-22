@@ -1,0 +1,175 @@
+<div class="di_block relative borderbottom_1px_bbb font_noto bg_white w100per h150p color_555">
+    <div class="di_block relative w80per h_center v_center ta_center">
+        <div class="title_text">
+            TIPS
+        </div>
+    </div>
+</div>
+
+<div class="di_block relative bg_gray w100per pd_y20x0">
+    <div class="di_block relative w80per h_center">
+
+        <!-- section begin -->
+        <div class="di_block relative w80per font_noto fs16 color_555 h_center">
+            <div class="di_block relative w100per ta_center h50p fs25 fw700 color_value pd_y10x0">
+                Single Page Rendering 
+            </div>
+            <div class="di_block relative w100per fs20 fw700 color_function">
+                Functions
+            </div>
+            <div class="bg_black br_5px pd_a10px mg_y10px">
+                <div class="di_flex jc_left tab2 wrap">
+                    <div class="color_sign">document</div>
+                    <div class="color_other">.</div>
+                    <div class="color_function">querySelector</div>
+                    <div class="color_other">(</div>
+                    <div class="color_variable">'.nav'</div>
+                    <div class="color_other">).</div>
+                    <div class="color_function">addEventListener</div>
+                    <div class="color_other">(</div>
+                    <div class="color_variable">'click'</div>
+                    <div class="color_other">,&nbsp;</div>
+                    <div class="color_sign">()&nbsp;</div>
+                    <div class="color_parent">=>&nbsp;</div>
+                    <div class="color_other">{</div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap">
+                    <span class="color_brace">eTemplate</span>
+                    <span class="color_other">({</span>
+                    <span class="color_value">sync_url</span>
+                    <span class="color_other">:&nbsp;</span>                                        
+                    <span class="color_brace">"filename.html"</span>
+                    <span class="color_other">});</span>
+                </div>
+                <div class="di_flex jc_left tab2 wrap">
+                    <div class="color_other">});</div>
+                </div>                                     
+            </div>
+            <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
+                <div class="di_flex jc_left tab2 wrap"> 
+                    To render other page on current page, use &lt;a&gt; tag event-handler in eTemplate() with sync_url.
+                </div>
+                <br>
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="color_function fw700">Be careful</span>:&nbsp;
+
+                    <span>When a new file is rendered,</span>
+                </div>
+                <div class="di_flex jc_left tab4 wrap"> 
+                    • old css files would be replaced to new css files
+                </div>
+                <div class="di_flex jc_left tab4 wrap"> 
+                    • new html would be rendered. 
+                </div>
+                <div class="di_flex jc_left tab4 wrap"> 
+                    • etemplate.js and function addListener() are still in effect.<br>
+                    &nbsp;&nbsp;&nbsp;You don't have to declare them in a new file again.  
+                </div>
+                <br>
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="color_function fw700">Be careful</span>:&nbsp;
+
+                    <span>use #filename(# + filename) for href in &lt;a&gt; tag, like &lt;a href="#feature"&gt;</span>
+                </div>
+                <div class="di_flex jc_left tab4 wrap"> 
+                    • eTemplate will take "url/#feature" as same with "url/feature.html".
+                </div>
+                <div class="di_flex jc_left tab4 wrap"> 
+                    • Browser's previous or next button doesn't trigger click event even though hash is changed.<br>
+                    &nbsp;&nbsp; You can handle it as below.
+                </div>
+            </div>  
+            <div class="bg_black br_5px pd_a10px mg_y10px">
+                <div class="di_flex jc_left tab2 wrap">
+                    <div class="color_sign">window</div>
+                    <div class="color_other">.</div>
+                    <div class="color_brace">onhashchange</div>
+                    <div class="color_other">&nbsp;=&nbsp;</div>
+                    <div class="color_function">function</div>
+                    <div class="color_other">() {</div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap">
+                    <span class="color_operator">if&nbsp;</span>
+                    <span class="color_other">(!</span>
+                    <span class="color_sign">window</span>
+                    <span class="color_other">.</span>                                        
+                    <span class="color_sign">innerDocClick</span>
+                    <span class="color_other">) {</span>
+                </div>
+                <div class="di_flex jc_left tab6 wrap">
+                    <div class="color_function">let&nbsp;</div>
+                    <span class="color_sign">href&nbsp;</span>
+                    <span class="color_other">=</span>
+                    <span class="color_sign">window</span>
+                    <span class="color_other">.</span>
+                    <span class="color_sign">location</span>
+                    <span class="color_other">.</span>
+                    <span class="color_sign">href</span>
+                    <span class="color_other">;</span>
+                </div>
+                <div class="di_flex jc_left tab6 wrap">
+                    <div class="color_function">let&nbsp;</div>
+                    <span class="color_sign">lastpart&nbsp;</span>
+                    <span class="color_other">=</span>
+                    <span class="color_sign">href</span>
+                    <span class="color_other">.</span>
+                    <span class="color_brace">split</span>
+                    <span class="color_other">(</span>
+                    <span class="color_value">'#'</span>
+                    <span class="color_other">).</span>
+                    <span class="color_brace">pop</span>
+                    <span class="color_other">();</span>
+                </div>
+                <div class="di_flex jc_left tab6 wrap">
+                    <span class="color_operator">if&nbsp;</span>
+                    <span class="color_other">(</span>
+                    <span class="color_sign">href</span>
+                    <span class="color_other">.</span>                                        
+                    <span class="color_brace">includes</span>
+                    <span class="color_other">(</span>
+                    <span class="color_value">'#'</span>
+                    <span class="color_other">)) {</span>
+                </div>
+                <div class="di_flex jc_left tab8 wrap">
+                    <span class="color_brace">eTemplate</span>
+                    <span class="color_other">({&nbsp;</span>
+                    <span class="color_value">sync_url</span>
+                    <span class="color_other">:&nbsp;</span>   
+                    <span class="color_value">`</span>
+                    <span class="color_function">${</span>
+                    <span class="color_brace">"lastpart"</span>
+                    <span class="color_function">}</span>
+                    <span class="color_value">.html`</span>
+                    <span class="color_other">&nbsp;});</span>
+                </div>
+                <div class="di_flex jc_left tab6 wrap">
+                    <span class="color_other">}&nbsp;</span>
+                    <span class="color_operator">else</span>
+                    <span class="color_other">&nbsp;{</span>                                        
+                </div>
+                <div class="di_flex jc_left tab8 wrap">
+                    <span class="color_brace">eTemplate</span>
+                    <span class="color_other">({&nbsp;</span>
+                    <span class="color_value">sync_url</span>
+                    <span class="color_other">:&nbsp;</span>   
+                    <span class="color_value">`index.html`</span>
+                    <span class="color_other">&nbsp;});</span>
+                </div>
+                <div class="di_flex jc_left tab6 wrap">
+                    <span class="color_other">}</span>
+                </div>
+                <div class="di_flex jc_left tab4 wrap">
+                    <span class="color_other">}</span>
+                </div>
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="color_other">}</span>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- section end-->   
+
+    </div>
+<!-- 70% block end-->
+</div>

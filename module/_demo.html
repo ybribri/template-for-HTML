@@ -1,0 +1,465 @@
+<div class="di_block relative borderbottom_1px_bbb font_noto bg_white w100per h150p color_555">
+    <div class="di_block relative w70per h_center v_center ta_center">
+        <div class="title_text">
+            DEMO
+        </div>
+    </div>
+</div>
+
+<div class="di_block relative bg_gray w100per pd_y20x0">
+    <div class="di_block relative w70per h_center">
+
+        <!-- section begin -->
+        <div class="di_block relative w90per font_barlow fs18 color_555 h_center font_consolas">
+
+            <div class="di_block relative w100per pd_y20x0 font_barlow">
+                Examples are to show how results change as variables change.<br>
+                Input data or push "CLICK" buttons to check the change of related templates.
+            </div>
+
+            <div class="di_block relative w100per ta_center h60p fs25 fw700 color_value pd_x0y20 font_barlow" style="line-height: 60px;">
+                Variables and one-line calculation
+            </div>
+            <div class="bg_black br_5px pd_a10px mg_y20px">
+                <div class="di_flex jc_left tab2 wrap mg_y2px">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">div</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px">
+                    <div class="color_other">popular subject :&nbsp;</div>
+                    <div class="color_other">📖 <%%= et.subject.join(' 📖 ') %></div>
+                </div>
+                <div class="di_flex jc_left tab2 wrap mg_y2px">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">/div</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab2 wrap mg_y2px">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">div</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px">
+                    <div class="color_sign">(&nbsp;</div>
+                    <div class="color_other"><%%= et.point[0] %> </div>
+                    <div class="color_sign">&nbsp;+&nbsp;</div>
+                    <div class="color_other"><%%= et.point[1] %> </div>
+                    <div class="color_sign">&nbsp;+&nbsp;</div>
+                    <div class="color_other"><%%= et.point[2] %> </div>
+                    <div class="color_sign">) / 3</div>
+                    <div class="color_sign">&nbsp;=&nbsp;</div>
+                    <div class="color_other"><%%= (et.point[0]+et.point[1]+et.point[2])/3 %></div>
+                </div>
+                <div class="di_flex jc_left tab2 wrap mg_y2px">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">/div</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+            </div>
+            <div class="bg_black br_5px pd_a10px mg_y20px">
+                <div class="di_flex jc_left tab4 wrap mg_y2px">
+                    <div class="color_value">data:</div>
+                    <div class="color_other">{</div>
+                    <div class="color_function">subject:&nbsp;</div>
+                    <div class="color_other">[</div>
+                    <div class="color_variable">"</div>
+                    <div class="color_variable "><%= et.subject.join('", "') %>"</div>
+                    <div class="color_other">],&nbsp;</div>
+                    <div class="color_function">point:&nbsp;</div>
+                    <div class="color_other">[</div>
+                    <div class="color_value "><%= et.point %> </div>
+                    <div class="color_other">]&nbsp;</div>
+                    <div class="color_other">}</div>
+                </div>
+            </div>
+            <div class="di_flex jc_left w100per mg_y5px">
+                <label for="btn2">Input et.subject[0]: </label>
+                <input type="text" id="btn2" value="<%= et.subject[0] %>" data-sync="et.subject[0]" oninput="syncTemplate(event)">
+            </div>
+            <div class="di_flex jc_left w100per mg_y5px">
+                <label for="btn3">Input et.point[0]: </label>
+                <input type="number" id="btn3" min="0" max="100" value="<%= et.point[0] %>" data-sync="et.point[0]" oninput="syncTemplate(event)">
+            </div>
+            <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
+                <div class="di_flex jc_center tab2 wrap">
+                    popular subject :&nbsp;📖&nbsp;<%= et.subject.join(' 📖 ') %>
+                </div>
+                <br>
+                <div class="di_flex jc_center tab2 wrap">
+                   (&nbsp;<%= et.point[0] %> &nbsp;+&nbsp;<%= et.point[1] %>&nbsp;+&nbsp;<%= et.point[2] %>&nbsp;) / 3 = <%= (et.point[0]+et.point[1]+et.point[2])/3 %>
+                </div>
+            </div>
+        </div>
+        <!-- section end-->
+
+        <!-- section begin -->
+        <div class="di_block relative w90per font_barlow fs18 color_555 h_center font_consolas">
+
+            <div class="di_block relative w100per ta_center h60p fs25 fw700 color_value pd_x0y20 font_barlow" style="line-height: 60px;">
+                If / else if / else
+            </div>
+            <div class="bg_black br_5px pd_a10px mg_y20px">
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <%% if(et.point[0]&gt;et.point[1]) { %>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px">
+                    <div class="color_tag">&lt;span&gt;</div>
+                    <div class="color_other"><%%= et.subject[0] %></div>
+                    <div class="color_tag">&lt;/span&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <%% } else if (et.point[1]&gt;et.point[2]) { %>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px">
+                    <div class="color_tag">&lt;span&gt;</div>
+                    <div class="color_other"><%%= et.subject[1] %></div>
+                    <div class="color_tag">&lt;/span&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <%% } else { %>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px">
+                    <div class="color_tag">&lt;span&gt;</div>
+                    <span class="color_other"><%%= et.subject[2] %></span>
+                    <div class="color_tag">&lt;/span&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <%% } %>
+                </div>
+            </div>
+
+            <div class="bg_black br_5px pd_a10px mg_y20px">
+                <div class="di_flex jc_left tab4 wrap mg_y2px">
+                    <div class="color_value">data:</div>
+                    <div class="color_other">{</div>
+                    <div class="color_function">subject:&nbsp;</div>
+                    <div class="color_other">[</div>
+                    <div class="color_variable">"</div>
+                    <div class="color_variable "><%= et.subject.join('", "') %>"</div>
+                    <div class="color_other">],&nbsp;</div>
+                    <div class="color_function">point:&nbsp;</div>
+                    <div class="color_other">[</div>
+                    <div class="color_value "><%= et.point %> </div>
+                    <div class="color_other">]&nbsp;</div>
+                    <div class="color_other">}</div>
+                </div>
+            </div>
+
+            <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
+                <div class="di_flex jc_center tab2 wrap ">
+                    <% if(et.point[0]>et.point[1]){ %>
+                        <%= et.subject[0] %>
+                    <% } else if (et.point[1]>et.point[2]) { %>  
+                        <%= et.subject[1] %>
+                    <% } else { %>
+                        <%= et.subject[2] %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <!-- section end-->
+
+        <!-- section begin -->
+        <div class="di_block relative w90per font_barlow fs18 color_555 h_center font_consolas">
+
+            <div class="di_block relative w100per ta_center h60p fs25 fw700 color_value pd_x0y20 font_barlow" style="line-height: 60px;">
+                for & value in attribute
+            </div>
+            <div class="bg_black br_5px pd_a10px mg_y20px">        
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <%%  for(var i=0; i&lt;et.noPic; i++){ %>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">div&nbsp; </div>
+                    <div class="color_attr">class&nbsp;</div>
+                    <div class="color_other">=</div>
+                    <div class="color_value">"img"</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">img&nbsp; </div>
+                    <div class="color_attr">src </div>
+                    <div class="color_other">= </div>
+                    <div class="color_value">"</div>
+                    <div class="color_other"><%%= et.imgSrc[i] %></div>
+                    <div class="color_value">"</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">div&nbsp;</div>
+                    <div class="color_attr">class</div>
+                    <div class="color_other">=</div>
+                    <div class="color_value">"img_text"</div>
+                    <div class="color_other">&gt;</div>                        
+                </div>
+                <div class="di_flex jc_left tab8 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">span</div>
+                    <div class="color_other">&gt;</div>
+                    <div class="color_other"><%%= et.imgText[i] %></div>
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">/span</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">/div</div>
+                    <div class="color_attr">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">/div</div>
+                    <div class="color_attr">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <%% } %>
+                </div>
+            </div>
+
+            <div class="bg_black br_5px pd_a10px mg_y20px">
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                    <div class="color_value">data:&nbsp;</div>
+                    <div class="color_other">{&nbsp;</div>                    
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_function">noPic:&nbsp;</div>    
+                    <div class="color_value">3</div>
+                    <div class="color_other">,</div>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_function">imgSrc:&nbsp;</div>    
+                    <div class="color_other">[ </div>
+                </div>
+                <div class="di_flex jc_left tab8 wrap mg_y2px color_other">
+                    <div class="color_value">'<%= et.imgSrc.join("',<br>'") %>'</div>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">],&nbsp;</div>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_function">imgText:&nbsp;</div>
+                    <div class="color_other">[ </div>    
+                    <div class="color_value">'<%= et.imgText.join("', '") %></div>
+                    <div class="color_value">'</div>                                        
+                    <div class="color_other">]</div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">                    
+                    <div class="color_other">}</div>
+                </div>
+            </div>
+
+            <div class="di_flex jc_left w100per mg_y5px">
+                <label for="btn4">Input et.noPic (1 - 3):&nbsp; </label>
+                <input type="number" min="1" max="3" id="btn4" value="<%= et.noPic %>" data-sync="et.noPic">
+            </div>
+
+            <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
+                <div class="di_flex jc_center tab2 wrap ">
+                    <%  for(var i=0; i<et.noPic; i++){ %>
+                        <div class="img">
+                            <img src="<%= et.imgSrc[i] %>">
+                            <div class="img_text">
+                                <span><%= et.imgText[i] %></span>
+                            </div>                            
+                        </div>
+                    <% } %>  
+                </div>
+            </div>
+        </div>
+        <!-- section end-->
+
+        <!-- section begin -->
+        <div class="di_block relative w90per font_barlow fs18 color_555 h_center font_consolas">
+
+            <div class="di_block relative w100per ta_center h60p fs25 fw700 color_value pd_x0y20 font_barlow" style="line-height: 60px;">
+                forEach
+            </div>
+            <div class="bg_black br_5px pd_a10px mg_y20px">        
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">div&nbsp;</div>
+                    <div class="color_attr">class&nbsp;</div>
+                    <div class="color_other">=</div>
+                    <div class="color_value">"</div>
+                    <div class="color_value">forEach</div>
+                    <div class="color_value">"</div>
+                    <div class="color_other">&gt; </div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">ul</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <%% et.list.forEach(function(val){ %>
+                </div>
+                <div class="di_flex jc_left tab8 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">li</div>
+                    <div class="color_other">&gt;</div>
+                    <div class="color_other"><%%= val %> </div>
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">/li</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <%% }) %>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">/ul</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <div class="color_other">&lt;</div>
+                    <div class="color_tag">/div</div>
+                    <div class="color_other">&gt;</div>
+                </div>
+            </div>
+
+            <div class="bg_black br_5px pd_a10px mg_y20px">
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">                
+                    <div class="color_value">data:&nbsp;</div>
+                    <div class="color_other">{&nbsp;</div>
+                    <div class="color_function">list:&nbsp;</div>    
+                    <div class="color_other">[ </div>
+                    <div class="color_number "><%= et.list %> </div>
+                    <div class="color_other">]}</div>
+                </div>
+            </div>
+            <div class="di_flex jc_left w100per mg_y5px">
+                <label for="btn5">Input number (0 - 100):&nbsp;</label>
+                <input type="number" id="btn5" min="0" max="100">
+            </div>
+            <div class="di_flex jc_left w100per mg_y5px">
+                <button id="btn6" class="click_btn">Add Number</button>
+                <button id="btn7" class="click_btn">Delete Number</button>
+            </div>
+
+            <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
+                <ul class="forEach jc_center tab2 wrap "> 
+                    <% et.list.forEach(function(val){ %>
+                        <li><%= val %></li>
+                    <% }) %>            
+                </ul>
+            </div>
+        </div>
+        <!-- section end-->
+
+        <!-- section begin -->
+        <div class="di_block relative w90per font_barlow fs18 color_555 h_center font_consolas">
+
+            <div class="di_block relative w100per ta_center h60p fs25 fw700 color_value pd_x0y20 font_barlow" style="line-height: 60px;">
+                Combination: for and if
+            </div>
+            <div class="bg_black br_5px pd_a10px mg_y20px">        
+                
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <%%  for(var i=0; i&lt;et.rows.length; i++){ %>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                    <%% if(et.rows[i]==0) { %>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">&lt; </div>
+                    <div class="color_tag">div&nbsp; </div>
+                    <div class="color_attr">class </div>
+                    <div class="color_sign">= </div>
+                    <div class="color_value">"small_circle_gird"&nbsp; </div>
+                    <div class="color_attr">style </div>
+                    <div class="color_sign">= </div>
+                    <div class="color_value">"background-color: gray" </div>
+                    <div class="color_other">&gt; </div>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">&lt; </div>
+                    <div class="color_tag">/div </div>
+                    <div class="color_attr">&gt; </div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                    <%% } else if(et.rows[i]==1) { %>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">&lt; </div>
+                    <div class="color_tag">div&nbsp; </div>
+                    <div class="color_attr">class </div>
+                    <div class="color_sign">= </div>
+                    <div class="color_value">"small_circle_gird"&nbsp; </div>
+                    <div class="color_attr">style </div>
+                    <div class="color_sign">= </div>
+                    <div class="color_value">"background-color: orange" </div>
+                    <div class="color_other">&gt; </div>                    
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">&lt; </div>
+                    <div class="color_tag">/div </div>
+                    <div class="color_attr">&gt; </div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                    <%% } else { %>
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">&lt; </div>
+                    <div class="color_tag">div&nbsp; </div>
+                    <div class="color_attr">class </div>
+                    <div class="color_sign">= </div>
+                    <div class="color_value">"small_circle_gird"&nbsp; </div>
+                    <div class="color_attr">style </div>
+                    <div class="color_sign">= </div>
+                    <div class="color_value">"background-color: red" </div>
+                    <div class="color_other">&gt; </div>                    
+                </div>
+                <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
+                    <div class="color_other">&lt; </div>
+                    <div class="color_tag">/div </div>
+                    <div class="color_attr">&gt; </div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                    <%% } %>
+                </div>
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                    <%% } %>
+                </div>
+            </div>
+
+            <div class="bg_black br_5px pd_a10px mg_y20px">
+                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">                
+                    <div class="color_value">data:&nbsp;</div>
+                    <div class="color_other">{&nbsp;</div>
+                    <div class="color_function">rows:&nbsp;</div>    
+                    <div class="color_other">[ </div>
+                    <div class="color_number"><%= et.rows %> </div>
+                    <div class="color_other">]}</div>
+                </div>
+            </div>
+
+            <div class="di_flex jc_center w100per h40p pd_a10px mg_y20px">
+                <button type="button" class="click_btn" id="btn8">CLICK</button>
+            </div>
+
+            <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
+                <div class="for jc_center tab2 wrap"> 
+                    <% for(var i=0; i<et.rows.length; i++){ %>
+                        <% if(et.rows[i]==0){ %>
+                            <div class="small_circle_grid" style="background-color: gray"> 
+                            </div>
+                        <% } else if(et.rows[i]==1){ %>
+                            <div class="small_circle_grid" style="background-color: orange"> 
+                            </div>
+                        <% } else { %>
+                            <div class="small_circle_grid" style="background-color: red"> 
+                            </div>
+                        <% } %>
+                    <% } %>   
+                </div>
+            </div>
+        </div>
+        <!-- section end-->
+
+    </div>
+    <!-- 70% block end-->
+</div>

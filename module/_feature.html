@@ -1,0 +1,290 @@
+	<div class="di_block relative borderbottom_1px_bbb font_noto bg_white w100per h150p color_555">
+		<div class="di_block relative w70per h_center v_center ta_center">
+			<div class="title_text">
+				FEATURE
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="di_block relative bg_gray w100per color_555 font_no fs16">
+
+		<div class="di_block relative w70per h_center">
+
+			<!-- section begin -->
+			<div class="di_flex flex_h relative w100per borderbottom_1px_bbb" id="f1"> <!-- template-->
+
+				<div class="di_flex flex_v jc_center relative w20per h100per">
+					<div class="di_block relative w100per h110p fs100 ta_center">
+						<i class="fas fa-less-than"></i>
+					</div>
+					<div class="di_block relative w100per h40p ta_center">
+						TEMPLATE LITERALS
+					</div>
+				</div>
+
+				<div class="di_block relative w80per h100per font_noto  pd_a10px">
+					<ul class="di_block ls_none">
+						<li>
+							<div>Template script in HTML file</div>
+							<div class="bg_black br_5px pd_a10px mg_y10px">
+								<div class="di_flex jc_left tab2">
+									<div class="color_tag">&lt;span&gt;</div>
+									<div class="color_other"><%%= data.subject[1] %></div>
+									<div class="color_tag">&lt;&#47;span&gt;</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div>Simple statements</div>
+							<div class="bg_black br_5px pd_a10px mg_y10px">
+								<div class="di_flex jc_left color_tag tab2">
+									<div class="color_tag">&lt;div&gt;</div>
+								</div>
+								<div class="di_flex jc_left tab4">
+									<div class="color_other">popular subject :&nbsp;</div>
+									<div class="color_other">📖 <%%= data.subject.join(' 📖 ') %></div>
+								</div>
+								<div class="di_flex jc_left tab2 color_tag">
+									&lt;&#47;div&gt;
+								</div>
+								<div class="di_flex jc_left tab2 color_tag">
+									&lt;div&gt;<br>
+								</div>
+								<div class="di_flex jc_left tab4">
+									<div class="color_other"><%%= data.data[0] %></div>
+									<div class="color_sign">&nbsp;*&nbsp;</div>
+									<div class="color_other"><%%= data.data[1] %></div>
+									<div class="color_sign">&nbsp;=&nbsp;</div>
+									<div class="color_other"><%%= data.data[0]*data.data[1] %></div>
+								</div>
+								<div class="di_flex jc_left tab2 color_tag">
+									&lt;&#47;div&gt;
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- section end-->
+
+			<!-- section begin -->
+			<div class="di_flex flex_h relative w100per  borderbottom_1px_bbb" id="f2">
+
+				<!-- left -->
+				<div class="di_block relative w20per h100per">
+					<div class="di_block relative w100per h110p fs100 ta_center">
+						<i class="fas fa-tasks"></i>
+					</div>
+					<div class="di_block relative w100per h40p ta_center">
+						TEMPLATE STATEMENTS
+					</div>
+				</div>
+				<!-- left -->
+
+				<!-- right -->
+				<div class="di_block relative w80per font_noto  pd_a10px">
+
+					<ul class="di_block ls_none">
+						<li>
+							<div>Javascript statements - if </div>
+							<div class="bg_black br_5px pd_a10px mg_y10px">
+								<div class="di_flex jc_left tab2 color_other"><%% if(data.data[0]&gt;data.data[1]) { %></div>
+								<div class="di_flex jc_left tab4">
+									<div class="color_tag">&lt;span&gt;</div>
+									<div class="color_other"><%%= data.subject[0] %></div>
+									<div class="color_tag">&lt;&#47;span&gt;</div>
+								</div>
+								<div class="di_flex jc_left tab2 color_other"><%% } else if (data.data[1]&gt;data.data[2]) { %></div>
+								<div class="di_flex jc_left tab4">
+									<div class="color_tag">&lt;span&gt;</div>
+									<div class="color_other"><%%= data.subject[1] %></div>
+									<div class="color_tag">&lt;&#47;span&gt;</div>
+								</div>
+								<div class="di_flex jc_left tab2 color_other"><%% } else { %></div>
+								<div class="di_flex jc_left tab4">
+									<div class="color_tag">&lt;span&gt;</div>
+									<div class="color_other"><%%= data.subject[2] %></div>
+									<div class="color_tag">&lt;&#47;span&gt;</div>
+								</div>
+								<div class="di_flex jc_left tab2 color_other"><%% } %></div>
+							</div>
+						</li>
+						<li>
+							<div>Javascript statements - for </div>
+							<div class="bg_black br_5px pd_a10px mg_y10px">
+								<div class="di_flex jc_left tab2 color_other"><%%  for(var i=0; i&lt;data.imgSrc.length; i++){ %></div>
+								<div class="di_flex jc_left tab4">
+									<div class="color_other">&lt;</div>
+									<div class="color_tag">div&nbsp; </div>
+									<div class="color_attr">class&nbsp;</div>
+									<div class="color_other">=</div>
+									<div class="color_value">"img"</div>
+									<div class="color_other">&gt;</div>
+								</div>
+								<div class="di_flex jc_left tab6">
+									<div class="color_other">&lt;</div>
+									<div class="color_tag">img&nbsp; </div>
+									<div class="color_attr">src </div>
+									<div class="color_other">= </div>
+									<div class="color_value">"</div>
+									<div class="color_other"><%%= data.imgSrc[i] %></div>
+									<div class="color_value">"</div>
+									<div class="color_other">&gt;</div>
+								</div>
+								<div class="di_flex jc_left tab6">
+									<div class="color_other">&lt;</div>
+									<div class="color_tag">div&nbsp;</div>
+									<div class="color_attr">class</div>
+									<div class="color_other">=</div>
+									<div class="color_value">"img_text"</div>
+									<div class="color_other">&gt;</div>                        
+								</div>
+								<div class="di_flex jc_left tab8">
+									<div class="color_other">&lt;</div>
+									<div class="color_tag">span</div>
+									<div class="color_other">&gt;</div>
+									<div class="color_other"><%%= data.imgText[i] %></div>
+									<div class="color_other">&lt;</div>
+									<div class="color_tag">&#47;span</div>
+									<div class="color_other">&gt;</div>
+								</div>
+								<div class="di_flex jc_left tab6">
+									<div class="color_attr">&lt;</div>
+									<div class="color_tag">&#47;div</div>
+									<div class="color_attr">&gt;</div>
+								</div>
+								<div class="di_flex jc_left tab4">
+									<div class="color_other">&lt;</div>
+									<div class="color_tag">&#47;div</div>
+									<div class="color_other">&gt;</div>
+								</div>
+								<div class="di_flex jc_left tab2 color_other">&lt; } &gt;</div>
+							</div>
+						</li>
+						<li>
+							<div>forEach, while, switch case ... </div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!-- section end-->
+
+			<!-- section begin -->
+			<div class="di_flex flex_h relative w100per borderbottom_1px_bbb" id="f3"> <!-- template-->
+				<!-- left begin -->
+				<div class="di_flex flex_v jc_center relative w20per h100per">
+					<div class="di_block relative w100per h110p fs100 ta_center">
+						<i class="fas fa-sync-alt"></i>
+					</div>
+					<div class="di_block relative w100per h40p ta_center">
+						TEMPLATE SYNC
+					</div>
+				</div>
+
+				<div class="di_block relative w80per h100per font_noto  pd_a10px">
+					<ul class="di_block ls_none">
+						<li>
+							<div>Variable change</div>
+						</li>
+						<li>
+							<div>Statements ( if, for, or while) change</div>
+						</li>
+						<li>
+							<div>Needs to be triggered by function</div>
+						</li>
+						<li>
+							<div>Eventlisteners in page must be added (See details in doc)</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- section end-->
+
+			<!-- section begin -->
+			<div class="di_flex flex_h relative w100per borderbottom_1px_bbb" id="f4"> <!-- template-->
+				<!-- left begin -->
+				<div class="di_flex flex_v jc_center relative w20per h100per">
+					<div class="di_block relative w100per h110p fs100 ta_center">
+						<i class="fas fa-cubes"></i>
+					</div>
+					<div class="di_block relative w100per h40p ta_center">
+						HTML MODULE CODING
+					</div>
+				</div>
+
+				<div class="di_block relative w80per h100per font_noto pd_a10px">
+					<ul class="di_block ls_none">
+						<li>
+							<div>Load HTML module into HTML</div>
+							<div class="bg_black br_5px pd_a10px mg_y10px">
+								<div class="di_flex jc_left tab2">
+									<div class="color_other">&lt;</div>
+									<div class="color_tag">div&nbsp;</div>
+									<div class="color_attr">class&nbsp;</div>
+									<div class="color_other">=</div>
+									<div class="color_value">"</div>
+									<div class="color_value">wrapper</div>
+									<div class="color_value">"</div>
+									<div class="color_other">&gt; </div>
+								</div>
+								<div class="di_flex jc_left tab4">
+									<div class="color_other"><%%  include('/template/_header.html') %> </div>
+								</div>													
+								<div class="di_flex jc_left tab4">
+									<div class="color_other"><%%  include('/template/_main.html') %> </div>
+								</div>
+								<div class="di_flex jc_left tab2">
+									<div class="color_other">&lt;</div>
+									<div class="color_tag">/div</div>
+									<div class="color_other">&gt; </div>
+								</div>																				
+							</div>
+						</li>
+						<li>
+							<div>Sources should be in the same server</div>
+						</li>
+						<li>
+							<div>Not applicable in local host due to CORS policy</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- section end-->
+			
+			<!-- section begin -->
+			<div class="di_flex flex_h relative w100per borderbottom_1px_bbb" id="f5"> <!-- template-->
+				<!-- left begin -->
+				<div class="di_flex flex_v jc_center relative w20per h100per">
+					<div class="di_block relative w100per h110p fs100 ta_center">
+						1
+					</div>
+					<div class="di_block relative w100per h40p ta_center">
+						SINGLE PAGE RENDERING
+					</div>
+				</div>
+
+				<div class="di_block relative w80per h100per font_noto  pd_a10px">
+					<ul class="di_block ls_none">
+						<li>
+							<div>As you see in this website, seperate HTML files can be rendered in one page</div>
+						</li>
+						<li>
+							<div>Seperate CSS files can be applied for each pages</div>
+						</li>
+						<li>
+							<div>But, for faster transition and less flash, some restrictions would be applied</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- section end-->				
+
+		</div>
+		<!-- 70% block end-->
+	</div>
+
+
+
