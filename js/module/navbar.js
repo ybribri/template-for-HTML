@@ -3,7 +3,7 @@ function activateNav() {
     // common js for nav-bar    
     let href=window.location.href;
     let lastpart = href.split('#').pop();
-    if (href==lastpart) lastpart='index';
+    if (href==lastpart) lastpart='about';
     let temp='';
 
     let navLinks=document.querySelectorAll('.nav-link');
@@ -61,17 +61,5 @@ function activateNav() {
                 });
         }
     });
-
-    window.onhashchange = function() {
-        if (!window.innerDocClick) {
-            let href=window.location.href;
-            let lastpart = href.split('#').pop();
-            if (href.includes('#')) {
-                eTemplate({ sync_url:`${lastpart}.html` });
-            } else {
-                eTemplate({ sync_url:`index.html` });
-            }
-        }
-    }
 
 }
