@@ -11,8 +11,6 @@ function activateNav() {
         navLink.classList.remove('active');
         temp=navLink.getAttribute('href').substring(1);
         if (lastpart==temp) navLink.classList.add('active');
-        console.log(temp);
-
         navLink.addEventListener('click', () => {
             temp=navLink.getAttribute('href').substring(1);
             if (temp.length!=0) eTemplate({ sync_url: temp+'.html' });
