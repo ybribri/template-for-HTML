@@ -10,7 +10,7 @@ function activateNav() {
     navLinks.forEach(navLink => {
         navLink.classList.remove('active');
         temp=navLink.getAttribute('href');
-        if (temp.indexOf('#')!=-1) {
+        if (temp.includes('#')) {
             temp=temp.substring(1);
             if (lastpart==temp) navLink.classList.add('active');
             navLink.addEventListener('click', () => {
@@ -34,6 +34,7 @@ function activateNav() {
         });
     });
 
+    // hamburger menu appearing in nav bar when window width is smaller
     let hamburgers=document.querySelectorAll('.hamburger');
     hamburgers.forEach(hamburger=>{
         hamburger.addEventListener('click',()=>{
@@ -49,7 +50,7 @@ function activateNav() {
         });
     });
 
-    
+    // navbar  display depending on window width
     window.addEventListener('resize', ()=>{
         let windowsize=window.outerWidth;
         let containerFluids=document.querySelectorAll('.container-fluid');

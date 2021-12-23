@@ -167,6 +167,12 @@
                                         <span class="color_other">,&nbsp;</span>
                                 </div>
                                 <div class="di_flex jc_left tab6 wrap">
+                                        <span class="color_value">start_url</span>
+                                        <span class="color_other">:&nbsp;</span>                                        
+                                        <span class="color_brace">"path"</span>
+                                        <span class="color_other">,&nbsp;</span>
+                                </div>                                
+                                <div class="di_flex jc_left tab6 wrap">
                                         <span class="color_value">scrollto</span>
                                         <span class="color_other">: {&nbsp;</span>
                                         <span class="color_value">id</span>
@@ -329,9 +335,31 @@
                                         <span class="tab2">
                                                 • path of html file to replace current html with (optional)<br>
                                                 • Use this parameter if all the html files are rendered in single page.<br>
-                                                • If you omit this, eTemplate() render current html file.
+                                                • If you omit this, eTemplate() find and render start_url, in case there is no start_url it will render current html file.
                                         </span>
                                 </div>
+                                <!-- param: start_url -->   
+                                <br>                               
+                                <div class="di_flex jc_left tab2 wrap">
+                                        <span class="color_other">•&nbsp;</span>
+                                        <span class="color_value fw700">start_url</span>
+                                        <span>: string</span>
+                                </div>
+                                <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
+                                        <div class="di_flex jc_left tab2 wrap">
+                                                <div class="color_value">start</div>
+                                               <div class="color_other">: &nbsp;</div>                                                
+                                                <div class="color_value">'/about.html'</div>
+                                        </div>
+                                </div>
+                                <div class="di_flex jc_left tab2 wrap pd_a5px"></div>
+                                <div class="di_flex jc_left tab2 wrap">
+                                        <span class="tab2">
+                                                • path of html file to render firstly replacing index.html with (optional)<br>
+                                                • Use this parameter if no sync_url is specified and want it to replace index.html.<br>
+                                                • If you omit this, eTemplate() will regard index.html as the first html file to be loaded.
+                                        </span>
+                                </div>                                
                                 <!-- param: scroll to -->   
                                 <br>                               
                                 <div class="di_flex jc_left tab2 wrap">
@@ -380,7 +408,7 @@
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="tab2">
                                                 • whole body rerendered dynamically, or element by element rerendered dynamically when data change<br>
-                                                • element rerendering is fast but, please careful ! Templates can be used in<span class="color_tag">&nbsp;only one attribute in one HTML tag&nbsp;</span> as below.<br>
+                                                • element rerendering is fast but, please be careful ! Templates can be used in<span class="color_tag">&nbsp;only one attribute in one HTML tag&nbsp;</span> as below.<br>
                                         </span>
                                 </div>
                                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
