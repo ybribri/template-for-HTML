@@ -9,13 +9,15 @@ function activateNav() {
     let navLinks=document.querySelectorAll('.nav-link');
     navLinks.forEach(navLink => {
         navLink.classList.remove('active');
-        temp=navLink.getAttribute('href').substring(1);
-        if (lastpart==temp) navLink.classList.add('active');
-        navLink.addEventListener('click', () => {
-            temp=navLink.getAttribute('href').substring(1);
-            if (temp.length!=0) eTemplate({ sync_url: temp+'.html' });
-        });
-
+        temp=navLink.getAttribute('href');
+        if (temp.indexOf('#')!=-1) {
+            temp=temp.substring(1);
+            if (lastpart==temp) navLink.classList.add('active');
+            navLink.addEventListener('click', () => {
+                temp=navLink.getAttribute('href').substring(1);
+                if (temp.length!=0) eTemplate({ sync_url: temp+'.html' });
+            });
+        }
     });
     
     let sumItems=document.querySelectorAll('.sum_item');
