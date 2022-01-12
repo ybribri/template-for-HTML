@@ -51,7 +51,7 @@
                     <div class="color_tag">div&nbsp;</div>
                     <div class="color_other">&gt; </div>
                 </div>
-                <div class="di_flex jc_left tab4 color_other"><%% include('/module/header.html') %></div>
+                <div class="di_flex jc_left tab4 color_other"><%% include('/module/_header.html') %></div>
                 <div class="di_flex jc_left tab2">
                     <div class="color_other">&lt;</div>
                     <div class="color_tag">/div</div>
@@ -62,7 +62,7 @@
                 INSERT SCRIPT WITH DATA  
             </div>
             <div class="di_block relative w100per fw700">
-                Place eTemplate() with data object inside script tag  
+                Create eTemplate() and execute it. 
             </div>
             <div class="bg_black br_5px pd_a10px mg_y10px">
                 <div class="di_flex jc_left tab2">
@@ -71,14 +71,21 @@
                     <span class="color_other">&gt;</span>
                 </div>
                 <div class="di_flex jc_left tab4">
+                    <span class="color_operator">const&nbsp;</span>
+                    <span class="color_brace">etm</span>
+                    <span class="color_sign">=</span>
+                    <span class="color_operator">new&nbsp;</span>
                     <span class="color_brace">eTemplate</span>
-                    <span class="color_other">({</span>
+                    <span class="color_sign">()</span>
+                    <span class="color_other">;</span>
+                </div>
+                <br>
+                <div class="di_flex jc_left tab4">
+                    <span class="color_other">let&nbsp;</span>
+                    <span class="color_variable">et</span>
+                    <span class="color_other">={</span>
                 </div>
                 <div class="di_flex jc_left tab6">
-                    <span class="color_other">data:&nbsp;</span>
-                    <span class="color_other">{</span>
-                </div>
-                <div class="di_flex jc_left tab8">
                     <span class="color_brace">subject: </span>
                     <span class="color_other">[</span>
                     <span class="color_variable">"mathematics"</span>
@@ -88,7 +95,7 @@
                     <span class="color_variable">"physics"</span>
                     <span class="color_other">],</span>
                 </div>
-                <div class="di_flex jc_left tab8">
+                <div class="di_flex jc_left tab6">
                     <span class="color_brace">data:&nbsp;</span>
                     <span class="color_other">[</span>
                     <span class="color_value">3</span>
@@ -98,12 +105,16 @@
                     <span class="color_value">5</span>
                     <span class="color_other">]</span>
                 </div>
-                <div class="di_flex jc_left tab6">
-                    <span class="color_other">}</span>
-                </div>                                
                 <div class="di_flex jc_left tab4">
-                    <span class="color_other">});</span>
-                </div>                
+                    <span class="color_other">};</span>
+                </div>
+                <br>                
+                <div class="di_flex jc_left tab4">
+                    <span class="color_brace">etm</span>
+                    <span class="color_other">.</span>
+                    <span class="color_function">render</span>
+                    <span class="color_other">();</span>
+                </div>
                 <div class="di_flex jc_left tab2">
                     <span class="color_other">&lt;</span>
                     <span class="color_tag">/script</span>
@@ -111,7 +122,7 @@
                 </div>
             </div>
             <div class="di_block relative w100per pd_y20x0 fw700">
-                For details, check out <a class="color_parent hv_uline" href="#docs" onclick="eTemplate('docs.html')">Documentation page</a>.
+                For details, check out <a class="color_parent hv_uline" href="#docs" onclick="etemplate.render({sync_url: 'docs.html', iscope: 'body'})">Docs page</a>.
                 <br>
                 <br>
             </div>

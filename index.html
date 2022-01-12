@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template literals for HTML</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/etemplate.min.js"></script>
-    <script src="./js/module/eventlistener.js"></script>
-    <script src="./js/module/navbar.js"></script>    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>eTemplate</title>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="./js/etemplate.js"></script>
+        <script src="./js/module/eventlistener.js"></script>
+        <script src="./js/module/navbar.js"></script>
 </head>
 
 <body>
-    <div class="main_wrapper">
-        <% include('/module/_header.html') %>
-        <% include('/module/_index.html') %>
-    </div>
+        <div class="main_wrapper">
+                <% include('/module/_header.html') %>
+                <% include('/module/_index.html') %>
+        </div>
 
 </body>
 
 <script>
-    eTemplate({
-        data: { 
-            subject: ["mathematics", "biology", "physics"],
-            point: [80, 70, 80],
-            data: [3, 4, 5],
-            rows: [0, 1, 2, 1, 2, 0, 2],
-            noPic: 3,
-            imgSrc: [ 'https://cdn.pixabay.com/photo/2021/11/23/13/32/forest-6818683_960_720.jpg',
-                    'https://cdn.pixabay.com/photo/2017/07/27/00/46/fantasy-2543658_960_720.jpg',
-                    'https://cdn.pixabay.com/photo/2015/06/02/12/59/book-794978_960_720.jpg'
-                    ],
-            imgText: ['image1','image2','image3'],
-            list: [10, 20, 30]
+        let temp_href = window.location.href;
+        let temp_lastpart = temp_href.split('#').pop();
+        if (temp_lastpart == temp_href) {
+                temp_lastpart = "about";
         }
+        let et = {
+                subject: ["mathematics", "biology", "physics"],
+                point: [80, 70, 80],
+                data: [3, 4, 5],
+                rows: [0, 1, 2, 1, 2, 0, 2],
+                noPic: 3,
+                imgSrc: ['https://cdn.pixabay.com/photo/2021/11/23/13/32/forest-6818683_960_720.jpg',
+                        'https://cdn.pixabay.com/photo/2017/07/27/00/46/fantasy-2543658_960_720.jpg',
+                        'https://cdn.pixabay.com/photo/2015/06/02/12/59/book-794978_960_720.jpg'
+                ],
+                imgText: ['image1', 'image2', 'image3'],
+                list: [10, 20, 30]
+        };
 
-    }).then(()=> {
-        console.log('eTemplate initiated');
-    });
-
+        const etemplate = new eTemplate();
+        etemplate.render({ iscope: 'body' });
+        // etemplate.ready(function(){
+        //         console.log(document.querySelector('.title_text').innerHTML);
+        // });        
 
 </script>
 

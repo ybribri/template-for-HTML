@@ -75,11 +75,11 @@
             </div>
             <div class="di_flex jc_left w100per mg_y5px">
                 <label for="btn2">Input et.subject[0]: </label>
-                <input type="text" id="btn2" value="<%= et.subject[0] %>" data-sync="et.subject[0]" oninput="syncTemplate(event)">
+                <input type="text" id="btn2" value="<%= et.subject[0] %>" data-sync="et.subject[0]" oninput="etemplate.sync(event)">
             </div>
             <div class="di_flex jc_left w100per mg_y5px">
                 <label for="btn3">Input et.point[0]: </label>
-                <input type="number" id="btn3" min="0" max="100" value="<%= et.point[0] %>" data-sync="et.point[0]" oninput="syncTemplate(event)">
+                <input type="number" id="btn3" min="0" max="100" value="<%= et.point[0] %>" data-sync="et.point[0]" oninput="etemplate.sync(event)">
             </div>
             <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
                 <div class="di_flex jc_center tab2 wrap">
