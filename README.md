@@ -18,6 +18,15 @@
     </ul>
 </div>
 
+<EXAMPLE - CSS>
+
+.abc {
+    width: <%= abc_width %>
+    color: <%= abc_color %>
+}
+⁎ templates inside <style> tag or linked CSS files
+⁎ Only <%= %>, simple template is available for CSS
+
 <TAGS>
     <%  Template tag, for contorl-flow, no output
     <%=  for variables / calculation or manipulation of variables
@@ -26,15 +35,17 @@
 
     <% include(' ... path/filename.html ... ') %>
 
-    modules can be included upto three level as below
+    modules can be included upto three levels as below.
 
+    feature.html >  _header.html
+                    _main.html >    _main_upper.html
+                                    _main_lower.html
 
 <render() and parameters>
 
 const etm=new eTemplate();
 
 etm.render({
-    data: { data },
     sync_url: "path", 
     start_url: "path", 
     scrollto: { id: "id", block: "start | center | end" },
@@ -44,74 +55,42 @@ etm.render({
 
     What it does: Render html files including templates.
 
+    * eTemplate doesn't accept data. Just declare variables which is used in templates before you execute render().
+
     Parameters:
-    • All the parameters are optional including even data object 
-        when
-        1. You use only "<% include( ... ) %>" for HTML modules. Or,
-            <% include('/module/_feature.html') %>
-        2. You use global variables for template scripts.
-            <%= data.join() %>
+    • All the parameters are optional 
 
-        let data={ points: [70, 80, 90] };
-        eTemplate();
+    • sync_url: string
+        sync_url: '/feature.html'
 
-• data: object
-    data: 
-        { 
-            points: [70, 80, 90], 
-            grade: ['C', 'B', 'A'], 
-            school: 'ABC highschool'
-        }
+            - path of html file to replace current html with (optional)
+            - Use this parameter if all the html files are rendered in single page.
+            - If you omit this, render() find and render start_url, in case there is no start_url it will render current html file.
 
-        <div><%= et.points.join() %></div>
-        <div><%= et.grade[1] %></div>
+    • scrollto: object
+        scrollto: { id: "id", block: "start | center | end" }
+        
+        • id: id of element to scroll to inside the html file of the second argument, sync_url
 
-        - data to be used for templates in HTML. 
-          (optional, omit this if you use global variables for templates)
-        - object would be stored into a variable "et" as examples.
+        • block: vertical alignment of the element. One of "start", "center", or "end"
 
-• sync_url: string
-    sync_url: '/feature.html'
+    • sync_class: string
+        sync_class: "default: et_sync" 
+        
+        • class name to specify elements to be re-rendered when sync() is executed.
+        • If you omit this, the class name "et_sync" will be added to parent elements of templates or template blocks.
+        • If there is no parent element, just before the template, <span> tag will be added as a parent element.
+        • If you don't want this <span> tag, surround templates with a tag that you want, such as <div>.
+        • In case a template is used in the attribute of tag, the class name will be added to the tag, itself.
+        (<Input class="et_sync" type="text" value="<%= data%> data-sync="data">)
 
-        - path of html file to replace current html with (optional)
-        - Use this parameter if all the html files are rendered in single page.
-        - If you omit this, render() find and render start_url, in case there is no start_url it will render current html file.
+    • iscope: string
+        iscope: "body" 
 
-• scrollto: object
-    scrollto: { id: "id", block: "start | center | end" }
-       
-    • id: id of element to scroll to inside the html file of the second argument, sync_url
-
-    • block: vertical alignment of the element. One of "start", "center", or "end"
-
-• sync_type: string
-    sync_type: "element(default) | body" 
-    
-    - method of re-rendering when sync() is executed. • default, element is for re-rendering elements including templates.
-    - whole is for re-rendering the whole page.
-    - Rendering element by element is much faster but, there is one restriction.
-    (if you use templates on attributes inside HTML tag, it's limited to only one attribute  as below.
-
-    (X) <div class="<%= et.class[0] %>" id="<%= et.id[0] %>">
-    (O) <input type="number" value="<%= et.data[0] %>" data-sync="et.data[0]" oninput="etm.sync(event)">
-    (O) <% for(var i=0; i<et.imgSrc.length; i++){ %>
-            <div class="img">
-                <img src="<%= et.imgSrc[i] %>">
-                <div class="img_text">
-                    <span>
-                        <%= et.imgText[i] %>
-                    </span>
-                </div>
-            </div>
-        <% } %>
-
-• iscope: string
-    iscope: "body" 
-
-    - render() finds out linked CSS files and check templates inside them.
-    Even though there is no template, all CSS elements have to be checked for templates, and it takes a while.
-    - If there is no template in CSS files, you can reduce a delay to check them by setting this parameter.
-    - If iscope is set to "body", render() skips checking CSS files.
+        - render() finds out linked CSS files and <style> tags, and check templates inside them.
+        Even though there is no template, all CSS elements have to be checked for templates, and it might takes a bit.
+        - If there is no template in CSS files, you can reduce a delay by setting this parameter.
+        - If iscope is set to "body", render() skips checking CSS files.
 
 <addListener()>
 
@@ -133,7 +112,7 @@ addListener() { ... event handler code ... }
 
 <sync()>
 
-sync(event)
+sync("body")
 
     What it does: refresh all the elements that has templates on current page
 
@@ -149,16 +128,17 @@ sync(event)
 
     Parameter:  
     
-    • event: event object
-    • event passed only from 'INPUT' tag
-      (use this parameter only to pass event object from <INPUT> tag)
+    • "body": string
 
-    <input type="number" value="<%= et.data[0] %>" data-sync="et.data[0]" oninput="etm.sync(event)">
+    • If you omit this, sync() will refresh all the templates of HTML and CSS.
+    • In case there is no template in CSS, you can speed up refereshing templates.
+
+    <input type="number" value="<%= et.data[0] %>" data-sync="et.data[0]" oninput="etm.sync()">
  
     ABOVE: 'oninput' event-handler inside <INPUT> tag
     BELOW: seperate event-handler inside <script> tag instead of script inside <INPUT> tag
  
-    document.querySelector('input').addEventListener('input',(event) => { etm.sync(event) });
+    document.querySelector('input').addEventListener('input',() => { etm.sync() });
 
     - Set an attribute "data-sync" to a variable name as above.
     - Then, value of <input> tag will be input to the variable.
