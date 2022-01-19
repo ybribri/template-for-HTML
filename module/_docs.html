@@ -1,8 +1,8 @@
 <div class="di_block relative borderbottom_1px_bbb font_noto bg_white w100per h150p color_555">
         <div class="di_block relative w80per h_center v_center ta_center">
-            <div class="title_text">
-                DOCS
-            </div>
+                <div class="title_text">
+                        DOCS
+                </div>
         </div>
 </div>
 
@@ -15,47 +15,77 @@
                         <div class="di_block relative w100per ta_center h50p fs25 fw700 color_value pd_y10x0">
                                 EXAMPLE : HTML
                         </div>
-                        <div class="bg_black br_5px pd_a10px mg_y10px">        
+                        <div class="bg_black br_5px pd_a10px mg_y10px">
                                 <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
-                                    <div class="color_other">&lt;</div>
-                                    <div class="color_tag">div</div>
-                                    <div class="color_other">&gt; </div>
+                                        <div class="color_other">&lt;</div>
+                                        <div class="color_tag">div</div>
+                                        <div class="color_other">&gt; </div>
                                 </div>
                                 <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
-                                    <div class="color_other">&lt;</div>
-                                    <div class="color_tag">ul</div>
-                                    <div class="color_other">&gt;</div>
+                                        <div class="color_other">&lt;</div>
+                                        <div class="color_tag">ul</div>
+                                        <div class="color_other">&gt;</div>
                                 </div>
                                 <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
-                                    <%% data.forEach(function(val){ %>
+                                        <%% data.forEach(function(val){ %>
                                 </div>
                                 <div class="di_flex jc_left tab8 wrap mg_y2px color_other">
-                                    <div class="color_other">&lt;</div>
-                                    <div class="color_tag">li</div>
-                                    <div class="color_other">&gt;</div>
-                                    <div class="color_other"><%%= val %> </div>
-                                    <div class="color_other">&lt;</div>
-                                    <div class="color_tag">/li</div>
-                                    <div class="color_other">&gt;</div>
+                                        <div class="color_other">&lt;</div>
+                                        <div class="color_tag">li</div>
+                                        <div class="color_other">&gt;</div>
+                                        <div class="color_other">
+                                                <%%= val %>
+                                        </div>
+                                        <div class="color_other">&lt;</div>
+                                        <div class="color_tag">/li</div>
+                                        <div class="color_other">&gt;</div>
                                 </div>
                                 <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
-                                    <%% }) %>
+                                        <%% }) %>
                                 </div>
                                 <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
-                                    <div class="color_other">&lt;</div>
-                                    <div class="color_tag">/ul</div>
-                                    <div class="color_other">&gt;</div>
+                                        <div class="color_other">&lt;</div>
+                                        <div class="color_tag">/ul</div>
+                                        <div class="color_other">&gt;</div>
                                 </div>
                                 <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
-                                    <div class="color_other">&lt;</div>
-                                    <div class="color_tag">/div</div>
-                                    <div class="color_other">&gt;</div>
+                                        <div class="color_other">&lt;</div>
+                                        <div class="color_tag">/div</div>
+                                        <div class="color_other">&gt;</div>
                                 </div>
                         </div>
 
                         <div class="di_block relative w100per ta_center h50p fs25 fw700 color_value pd_y10x0">
+                                EXAMPLE : CSS
+                        </div>
+                        <div class="bg_black br_5px pd_a10px mg_y10px">
+                                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                                        <div class="color_attr">.abc&nbsp;</div>
+                                        <div class="color_other">{</div>
+                                </div>
+                                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                                        <div class="color_other">width: <%%= abc_width %></div>
+                                </div>
+                                <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
+                                        <div class="color_other">color: <%%= abc_color %></div>
+                                </div>
+                                <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
+                                        <div class="color_other">}</div>
+                                </div>
+                                <div class="di_flex jc_left tab2 font_barlow">
+                                        <span class="color_other">⁎&nbsp;</span>
+                                        <span class="color_other">templates inside &lt;style&gt; tag or linked CSS files</span>
+                                </div>                                                           
+                                <div class="di_flex jc_left tab2 font_barlow">
+                                        <span class="color_other">⁎&nbsp;</span>
+                                        <span class="color_other">Only <%%= %>, simple template is available for CSS</span>
+                                </div>                                                           
+                        </div>
+
+
+                        <div class="di_block relative w100per ta_center h50p fs25 fw700 color_value pd_y10x0">
                                 EXAMPLE : EXECUTE
-                        </div>                        
+                        </div>
                         <div class="bg_black br_5px pd_a10px mg_y10px">
                                 <div class="di_flex jc_left tab2">
                                         <span class="color_operator">const&nbsp;</span>
@@ -67,7 +97,7 @@
                                         <span class="color_other">;</span>
                                 </div>
                                 <br>
-                                        <div class="di_flex jc_left tab2">
+                                <div class="di_flex jc_left tab2">
                                         <span class="color_brace">etm</span>
                                         <span class="color_other">.</span>
                                         <span class="color_function">render</span>
@@ -75,67 +105,73 @@
                                 </div>
                                 <div class="di_flex jc_left tab2">
                                         <span class="color_other">&nbsp;</span>
-                                </div>                                                                       
+                                </div>
                                 <div class="di_flex jc_left tab2 font_barlow">
-                                        <span class="color_tag">⁎&nbsp;</span>                                        
-                                        <span class="color_tag">render a page with user_data of object type</span>
-                                </div>                                
+                                        <span class="color_other">⁎&nbsp;</span>
+                                        <span class="color_other">render a page with user_data of object type</span>
+                                </div>
                         </div>
                         <div class="di_block relative w100per ta_center h50p fs25 fw700 color_value pd_y10x0">
                                 TAGS
                         </div>
                         <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
-                                <div class="di_flex jc_center tab2 wrap"> 
+                                <div class="di_flex jc_center tab2 wrap">
                                         <ul class="ul_disc">
                                                 <li>
                                                         <span class="script_color">&lt;%&nbsp;</span>
-                                                        <span>Template tag, for contorl-flow, no output</span>
+                                                        <span>Template tag, for control-flow, no output</span>
                                                 </li>
                                                 <li>
                                                         <span class="script_color">&lt;%=&nbsp;</span>
-                                                        <span>for variables / calculation or manipulation of variables</span>
-                                                 </li>
-                                                 <li>
+                                                        <span>for variables / calculation or manipulation of
+                                                                variables</span>
+                                                </li>
+                                                <li>
                                                         <span class="script_color">&lt;%%&nbsp;</span>
                                                         <span>Output a literal '&lt;%'</span>
-                                                 </li>
-                                                 <li>
+                                                </li>
+                                                <li>
                                                         <span class="script_color">%&gt;&nbsp;</span>
                                                         <span>End of tag</span>
-                                                 </li>                                                                                                                                                   
+                                                </li>
+                                                <li>
+                                                        <span class="script_color">&lt;%&nbsp;</span>
+                                                        <span>include(' ... path/filename.html ... ')</span>
+                                                        <span class="script_color">%&gt;</span>
+                                                        <br><br>
+                                                        <span>modules can be included upto three levels as a below example</span>
+                                                </li>
                                         </ul>
-                                </div>
-                                <br>
-                                <div class="di_flex jc_center wrap">
-                                        <span class="script_color">&lt;%&nbsp;</span>
-                                        <span>include(' ... path/filename.html ... ')</span>
-                                        <span class="script_color">%&gt;</span>
-                                </div>
-                                <div class="di_flex jc_center wrap">
-                                        <span>modules can be included upto three level as below</span>
+
                                 </div>
                                 <br>
                                 <div class="di_flex jc_center wrap mg_y5px fs11">
-                                        <div class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p bg_gray fw700 color_tag br_5px">
+                                        <div
+                                                class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p bg_gray fw700 color_tag br_5px">
                                                 feature.html
                                         </div>
                                 </div>
                                 <div class="di_flex jc_center wrap">
-                                        <div class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p  mg_y5px mg_x40px bg_gray fw700 color_function fs11 br_5px">
+                                        <div
+                                                class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p  mg_y5px mg_x40px bg_gray fw700 color_function fs11 br_5px">
                                                 _header.html
                                         </div>
-                                        <div class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p mg_y5px mg_x40px bg_gray fw700 color_function fs11 br_5px">
+                                        <div
+                                                class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p mg_y5px mg_x40px bg_gray fw700 color_function fs11 br_5px">
                                                 _feature.html
                                         </div>
                                 </div>
                                 <div class="di_flex jc_right wrap">
-                                        <div class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p  mg_y5px mg_x10px bg_gray fw700 color_value fs11 br_5px">
+                                        <div
+                                                class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p  mg_y5px mg_x10px bg_gray fw700 color_value fs11 br_5px">
                                                 _feature_uppper.html
                                         </div>
-                                        <div class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p mg_y5px mg_x10px bg_gray fw700 color_value fs11 br_5px">
+                                        <div
+                                                class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p mg_y5px mg_x10px bg_gray fw700 color_value fs11 br_5px">
                                                 _feature_middle.html
                                         </div>
-                                        <div class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p mg_y5px mg_x10px bg_gray fw700 color_value fs11 br_5px">
+                                        <div
+                                                class="di_block w20per h30px bd_all_1p_bbb ta_center lh_30p mg_y5px mg_x10px bg_gray fw700 color_value fs11 br_5px">
                                                 _feature_lower.html
                                         </div>
                                 </div>
@@ -166,72 +202,76 @@
                                 </div>
                                 <div class="di_flex jc_left tab6 wrap">
                                         <span class="color_value">sync_url</span>
-                                        <span class="color_other">:&nbsp;</span>                                        
+                                        <span class="color_other">:&nbsp;</span>
                                         <span class="color_brace">"path"</span>
                                         <span class="color_other">,&nbsp;</span>
                                 </div>
                                 <div class="di_flex jc_left tab6 wrap">
                                         <span class="color_value">start_url</span>
-                                        <span class="color_other">:&nbsp;</span>                                        
+                                        <span class="color_other">:&nbsp;</span>
                                         <span class="color_brace">"path"</span>
                                         <span class="color_other">,&nbsp;</span>
-                                </div>                                
+                                </div>
                                 <div class="di_flex jc_left tab6 wrap">
                                         <span class="color_value">scrollto</span>
                                         <span class="color_other">: {&nbsp;</span>
                                         <span class="color_value">id</span>
-                                        <span class="color_other">:&nbsp;</span>                                        
+                                        <span class="color_other">:&nbsp;</span>
 
-                                        <span class="color_brace">"id"</span>                                                
+                                        <span class="color_brace">"id"</span>
                                         <span class="color_other">,&nbsp;</span>
                                         <span class="color_value">block</span>
-                                        <span class="color_other">:&nbsp;</span>                                        
-                                        <span class="color_brace">"start | center | end"&nbsp;</span>                                                
+                                        <span class="color_other">:&nbsp;</span>
+                                        <span class="color_brace">"start | center | end"&nbsp;</span>
                                         <span class="color_other">},</span>
                                 </div>
                                 <div class="di_flex jc_left tab6 wrap">
-                                        <span class="color_value">sync_type</span>
-                                        <span class="color_other">:&nbsp;</span>                                        
-                                        <span class="color_brace">"default: element | whole"</span>
+                                        <span class="color_value">sync_class</span>
+                                        <span class="color_other">:&nbsp;</span>
+                                        <span class="color_brace">"default: et_sync"</span>
                                         <span class="color_other">,</span>
                                 </div>
                                 <div class="di_flex jc_left tab6 wrap">
                                         <span class="color_value">iscope</span>
-                                        <span class="color_other">:&nbsp;</span>                                        
+                                        <span class="color_other">:&nbsp;</span>
                                         <span class="color_brace">default: '' | "body"</span>
-                                </div>                                
+                                </div>
                                 <div class="di_flex jc_left tab4">
                                         <span class="color_other">});</span>
-                                </div>                                
+                                </div>
                         </div>
                         <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
-                                <div class="di_flex jc_left tab2 wrap"> 
+                                <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_function fw700">What it does:&nbsp;</span>
                                         <span>Render html files including templates.</span>
                                 </div>
                                 <br>
-                                <div class="di_flex jc_left tab2 wrap"> 
+                                <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_function fw700">Parameters: &nbsp;</span>
                                 </div>
-                                <div class="di_flex jc_left tab2 wrap"> 
-                                        <span class="fw700">• All the parameters are optional including even data object&nbsp;</span>
+                                <div class="di_flex jc_left tab2 wrap">
+                                        <span class="fw700">• All the parameters are optional</span>
                                         <span class="color_operator fw700">when</span>
-                                </div>                                                                
-                                <div class="di_flex jc_left tab4 wrap"> 
-                                        1. You use only "&lt;% include( ... ) %&gt;" for HTML modules. Or,
+                                </div>
+                                <div class="di_flex jc_left tab4 wrap">
+                                        1. You can use only "&lt;% include( ... ) %&gt;" for HTML modules. Or,
                                 </div>
                                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
-                                        <div class="color_other tab2  wrap"><%% include('/module/_feature.html') %></div>
-                                </div>                                
-                                <div class="di_flex jc_left tab4 wrap"> 
-                                        2. You use global variables for template scripts.
+                                        <div class="color_other tab2  wrap">
+                                                <%% include('/module/_feature.html') %>
+                                        </div>
+                                </div>
+                                <div class="di_flex jc_left tab4 wrap">
+                                        2. Use variables for template scripts, which can be global or in the same scope.
                                 </div>
                                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
                                         <div class="di_flex jc_left tab2">
-                                                <span class="color_other"><%%= data.join()  %></span>
-                                        </div>                                              
+                                                <span class="color_other">
+                                                        <%%= data.join() %>
+                                                </span>
+                                        </div>
                                         <br>
-                                        <div class="di_flex jc_left tab2 wrap"> 
+                                        <div class="di_flex jc_left tab2 wrap">
                                                 <div class="color_operator">let&nbsp;</div>
                                                 <div class="color_variable">data</div>
                                                 <div class="color_sign">=</div>
@@ -242,7 +282,7 @@
                                                 <div class="color_other">,&nbsp;</div>
                                                 <div class="color_value">90</div>
                                                 <div class="color_brace">] </div>
-                                                <div class="color_other">;</div>                                                
+                                                <div class="color_other">;</div>
                                         </div>
                                         <div class="di_flex jc_left tab2 wrap">
                                                 <span class="color_brace">etm</span>
@@ -250,12 +290,12 @@
                                                 <span class="color_function">render</span>
                                                 <span class="color_parent">()</span>
                                                 <span class="color_other">;</span>
-                                        </div>                                              
+                                        </div>
 
-                                </div> 
-                           
-                                <!-- param: sync_url -->   
-                                <br>                               
+                                </div>
+
+                                <!-- param: sync_url -->
+                                <br>
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_other">•&nbsp;</span>
                                         <span class="color_value fw700">sync_url</span>
@@ -264,7 +304,7 @@
                                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
                                         <div class="di_flex jc_left tab2 wrap">
                                                 <div class="color_value">sync_url</div>
-                                               <div class="color_other">: &nbsp;</div>                                                
+                                                <div class="color_other">: &nbsp;</div>
                                                 <div class="color_value">'/feature.html'</div>
                                         </div>
                                 </div>
@@ -272,12 +312,14 @@
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="tab2">
                                                 • path of html file to replace current html with (optional)<br>
-                                                • Use this parameter if all the html files are rendered in single page.<br>
-                                                • If you omit this, render() find and render start_url, in case there is no start_url it will render current html file.
+                                                • Use this parameter if all the html files are rendered in single
+                                                page.<br>
+                                                • If you omit this, render() find and render start_url, in case there is
+                                                no start_url it will render current html file.
                                         </span>
                                 </div>
-                                <!-- param: start_url -->   
-                                <br>                               
+                                <!-- param: start_url -->
+                                <br>
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_other">•&nbsp;</span>
                                         <span class="color_value fw700">start_url</span>
@@ -286,20 +328,23 @@
                                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
                                         <div class="di_flex jc_left tab2 wrap">
                                                 <div class="color_value">start</div>
-                                               <div class="color_other">: &nbsp;</div>                                                
+                                                <div class="color_other">: &nbsp;</div>
                                                 <div class="color_value">'/about.html'</div>
                                         </div>
                                 </div>
                                 <div class="di_flex jc_left tab2 wrap pd_a5px"></div>
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="tab2">
-                                                • path of html file to render firstly replacing index.html with (optional)<br>
-                                                • Use this parameter if no sync_url is specified and want it to replace index.html.<br>
-                                                • If you omit this, render() will regard index.html as the first html file to be loaded.
+                                                • path of html file to render firstly replacing index.html with
+                                                (optional)<br>
+                                                • Use this parameter if no sync_url is specified and want it to replace
+                                                index.html.<br>
+                                                • If you omit this, render() will regard index.html as the first html
+                                                file to be loaded.
                                         </span>
-                                </div>                                
-                                <!-- param: scroll to -->   
-                                <br>                               
+                                </div>
+                                <!-- param: scroll to -->
+                                <br>
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_other">•&nbsp;</span>
                                         <span class="color_value fw700">scrollto</span>
@@ -311,148 +356,54 @@
                                                 <span class="color_value">scrollto</span>
                                                 <span class="color_other">: {&nbsp;</span>
                                                 <span class="color_value">id</span>
-                                                <span class="color_other">:&nbsp;</span>                                        
-                                                <span class="color_brace">"id"</span>                                                
+                                                <span class="color_other">:&nbsp;</span>
+                                                <span class="color_brace">"id"</span>
                                                 <span class="color_other">,&nbsp;</span>
                                                 <span class="color_value">block</span>
-                                                <span class="color_other">:&nbsp;</span>                                        
-                                                <span class="color_brace">"start | center | end"&nbsp;</span>                                                
+                                                <span class="color_other">:&nbsp;</span>
+                                                <span class="color_brace">"start | center | end"&nbsp;</span>
                                                 <span class="color_other">}</span>
                                         </div>
                                 </div>
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="tab2">
-                                                <span class="color_value">• id</span>: id of element to scroll to inside the html file of the second argument, sync_url<br>
-                                                <span class="color_value">• block</span>: vertical alignment of the element. One of "start", "center", or "end"
+                                                <span class="color_value">• id</span>: id of element to scroll to inside
+                                                the html file of the second argument, sync_url<br>
+                                                <span class="color_value">• block</span>: vertical alignment of the
+                                                element. One of "start", "center", or "end"
                                         </span>
                                 </div>
-                                <!-- param: sync_type -->   
-                                <br>                               
+                                <!-- param: sync_class -->
+                                <br>
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_other">•&nbsp;</span>
-                                        <span class="color_value fw700">sync_type</span>
+                                        <span class="color_value fw700">sync_class</span>
                                         <span>: string</span>
                                 </div>
 
                                 <div class="di_flex jc_left tab2 wrap pd_a5px"></div>
                                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px">
                                         <div class="di_flex jc_left tab2 wrap">
-                                                <span class="color_value">sync_type</span>
-                                                <span class="color_other">:&nbsp;</span>                                        
-                                                <span class="color_brace">"element(default) | whole"&nbsp;</span>    
+                                                <span class="color_value">sync_class</span>
+                                                <span class="color_other">:&nbsp;</span>
+                                                <span class="color_brace">"[et_sync(default)]"&nbsp;</span>
                                         </div>
                                 </div>
 
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="tab2">
-                                                • method of re-rendering when sync() is executed.
-                                                • default, element is for re-rendering elements including templates.<br>
-                                                • whole is for re-rendering the whole page.<br>
-                                                • Rendering element by element is much faster but, there is one restriction.<br>
-                                                &nbsp;&nbsp;(if you use templates on attributes inside HTML tag, it's limited to<span class="color_tag">&nbsp;only one attribute&nbsp;</span> as below.<br>
+                                                • class name to specify elements to re-render when sync() is
+                                                executed.<br>
+                                                • If you omit this, the class name "et_sync" will be added to parent
+                                                elements of templates or template blocks.<br>
+                                                • In case a template is used in the attribute of tag, the class name
+                                                will be added to the tag, itself.<br>
+                                                (&lt;Input class="et_sync" type="text" value="&lt;%= data%&gt;
+                                                data-sync="data"&gt;)
                                         </span>
                                 </div>
-                                <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
-                                        <div class="di_flex jc_left tab2 wrap">
-                                                <div class="color_other">(X)&nbsp;</div>
-                                                <div class="color_other">&lt; </div>
-                                                <div class="color_tag">div&nbsp; </div>
-                                                <div class="color_attr">class</div>
-                                                <div class="color_sign">= </div>
-                                                <div class="color_value">"</div>
-                                                <div class="color_tag fw700"><%%= et.class[0] %></div>                                                
-                                                <div class="color_value">"&nbsp;</div>                                                
-                                                <div class="color_attr">id</div>
-                                                <div class="color_sign">= </div>
-                                                <div class="color_value">"</div>                                                
-                                                <div class="color_tag fw700">&lt;%= et.id[0] %&gt;</div>
-                                                <div class="color_value">"</div>                                                
-                                                <div class="color_other">&gt; </div>      
-                                        </div>
-                                        <br>                                        
-                                        <div class="di_flex jc_left tab2 wrap">
-                                                <div class="color_other">(O)&nbsp;</div>
-                                                <div class="color_other">&lt; </div>
-                                                <div class="color_tag">input&nbsp; </div>
-                                                <div class="color_attr">type</div>
-                                                <div class="color_sign">= </div>
-                                                <div class="color_value">"number"&nbsp;</div>
-                                                <div class="color_attr">value</div>
-                                                <div class="color_sign">= </div>
-                                                <div class="color_tag fw700">"&lt;%= et.data[0] %&gt;"&nbsp;</div>
-                                                <div class="color_attr">data-sync</div>
-                                                <div class="color_sign">= </div>
-                                                <div class="color_value">"et.data[0]"&nbsp;</div>
-                                                <div class="color_attr">oninput</div>
-                                                <div class="color_sign">= </div>
-                                                <div class="color_value">"</div>   
-                                                <div class="color_attr">etm</div>                 
-                                                <div class="color_other">.</div>                                                                 
-                                                <div class="color_function">sync</div>
-                                                <div class="color_value">(</div>
-                                                <div class="color_operator">event</div>
-                                                <div class="color_value">)</div>                    
-                                                <div class="color_value">"</div>                       
-                                                <div class="color_other">&gt; </div>      
-                                        </div>
-                                        <br>
-                                        <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
-                                                <div>(O)</div>
-                                        </div>
-                                        <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
-                                                <div><%%  for(var i=0; i&lt;et.imgSrc.length; i++){ %></div>
-                                        </div>
-                                        <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
-                                                <div class="color_other">&lt;</div>
-                                                <div class="color_tag">div&nbsp; </div>
-                                                <div class="color_attr">class&nbsp;</div>
-                                                <div class="color_other">=</div>
-                                                <div class="color_value">"img"</div>
-                                                <div class="color_other">&gt;</div>
-                                        </div>
-                                        <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
-                                                <div class="color_other">&lt;</div>
-                                                <div class="color_tag">img&nbsp; </div>
-                                                <div class="color_attr">src </div>
-                                                <div class="color_other">= </div>
-                                                <div class="color_value">"</div>
-                                                <div class="color_tag fw700"><%%= et.imgSrc[i] %></div>
-                                                <div class="color_value">"</div>
-                                                <div class="color_other">&gt;</div>
-                                        </div>
-                                        <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
-                                                <div class="color_other">&lt;</div>
-                                                <div class="color_tag">div&nbsp;</div>
-                                                <div class="color_attr">class</div>
-                                                <div class="color_other">=</div>
-                                                <div class="color_value">"img_text"</div>
-                                                <div class="color_other">&gt;</div>                        
-                                        </div>
-                                        <div class="di_flex jc_left tab8 wrap mg_y2px color_other">
-                                                <div class="color_other">&lt;</div>
-                                                <div class="color_tag">span</div>
-                                                <div class="color_other">&gt;</div>
-                                                <div class="color_other"><%%= et.imgText[i] %></div>
-                                                <div class="color_other">&lt;</div>
-                                                <div class="color_tag">/span</div>
-                                                <div class="color_other">&gt;</div>
-                                        </div>
-                                        <div class="di_flex jc_left tab6 wrap mg_y2px color_other">
-                                                <div class="color_other">&lt;</div>
-                                                <div class="color_tag">/div</div>
-                                                <div class="color_attr">&gt;</div>
-                                        </div>
-                                        <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
-                                                <div class="color_other">&lt;</div>
-                                                <div class="color_tag">/div</div>
-                                                <div class="color_attr">&gt;</div>
-                                        </div>
-                                        <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
-                                                <%% } %>
-                                        </div>
-                                </div>
-                                <!-- param: iscope -->   
-                                <br>                               
+                                <!-- param: iscope -->
+                                <br>
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_other">•&nbsp;</span>
                                         <span class="color_value fw700">iscope</span>
@@ -463,19 +414,22 @@
                                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px">
                                         <div class="di_flex jc_left tab2 wrap">
                                                 <span class="color_value">iscope</span>
-                                                <span class="color_other">:&nbsp;</span>                                        
-                                                <span class="color_brace">"body"&nbsp;</span>    
+                                                <span class="color_other">:&nbsp;</span>
+                                                <span class="color_brace">"body"&nbsp;</span>
                                         </div>
                                 </div>
 
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="tab2">
-                                                • render() finds out linked CSS files and check templates inside them.<br>
-                                                &nbsp;&nbsp;Even though there is no template, all CSS elements have to be checked for templates, and it takes a while.<br>
-                                                • If there is no template in CSS files, you can reduce a delay to check them by setting this parameter.<br>
+                                                • render() finds out linked CSS files and check templates inside
+                                                them.<br>
+                                                &nbsp;&nbsp;Even though there is no template, all CSS elements have to
+                                                be checked for templates, and it takes a while.<br>
+                                                • If there is no template in CSS files, you can reduce a delay to check
+                                                them by setting this parameter.<br>
                                                 • If iscope is set to "body", render() skips checking CSS files.<br>
                                         </span>
-                                </div>                                
+                                </div>
 
                         </div>
 
@@ -496,18 +450,19 @@
                                 </div>
                         </div>
                         <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
-                                <div class="di_flex jc_left tab2 wrap"> 
+                                <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_function fw700">What it does:&nbsp;</span>
                                         <span>add collection of event-handlers for elements</span>
                                 </div>
-                                <div class="di_flex jc_left tab2 wrap"> 
+                                <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_function fw700">Why needed:&nbsp;</span>
                                         <span>
                                                 render() is an async function that includes file reading.<br>
-                                                To add an event-handler after a page rendered, there are two ways.<br><br>
+                                                To add an event-handler after a page rendered, there are two
+                                                ways.<br><br>
                                         </span>
                                 </div>
-                                <div class="di_flex jc_left tab2 wrap"> 
+                                <div class="di_flex jc_left tab2 wrap">
                                         <span>
                                                 • one way to add handler with then() as below.
                                         </span>
@@ -521,7 +476,7 @@
                                                 <div class="color_function">then</div>
                                                 <div class="color_other">(</div>
                                                 <div class="color_brace">&nbsp;()&nbsp;</div>
-                                                <div class="color_operator">=&gt;&nbsp;</div>                                                
+                                                <div class="color_operator">=&gt;&nbsp;</div>
                                                 <div class="color_brace">{</div>
                                         </div>
                                         <div class="di_flex jc_left tab4 wrap">
@@ -533,8 +488,9 @@
                                                 <div class="color_other">;</div>
                                         </div>
                                 </div>
-                                <div class="di_flex jc_left tab2 wrap">                                 
-                                        • The other way is appending event-handlers inside 'addListener()' and it will be executed in render() and sync() if sync_type parameter is "whole".
+                                <div class="di_flex jc_left tab2 wrap">
+                                        • The other way is appending event-handlers inside 'addListener()' and it will
+                                        be executed in render() and sync() if sync_type parameter is "whole".
                                 </div>
                                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a5px mg_y10px bd_all_1p_bbb">
 
@@ -543,14 +499,14 @@
                                                         <div class="color_function">function&nbsp;</div>
                                                         <div class="color_brace">addListener</div>
                                                         <div class="color_other">(</div>
-                                                        <div class="color_tag">page</div>                    
+                                                        <div class="color_tag">page</div>
                                                         <div class="color_other">)</div>
                                                         <div class="color_other">&nbsp;{</div>
                                                 </div>
                                                 <div class="di_flex jc_left tab4 wrap mg_y2px">
                                                         <div class="color_function">switch&nbsp;</div>
                                                         <div class="color_other">(</div>
-                                                        <div class="color_tag">page</div>                    
+                                                        <div class="color_tag">page</div>
                                                         <div class="color_other">)</div>
                                                         <div class="color_other">&nbsp;{</div>
                                                 </div>
@@ -570,15 +526,15 @@
                                                         <div class="color_other">:</div>
                                                 </div>
                                                 <div class="di_flex jc_left tab6 wrap mg_y2px">
-                                                    <div class="color_function">case&nbsp;</div>
+                                                        <div class="color_function">case&nbsp;</div>
                                                         <div class="color_value">"docs.html"</div>
                                                         <div class="color_other">:</div>
                                                 </div>
                                                 <div class="di_flex jc_left tab6 wrap mg_y2px">
                                                         <div class="color_function">case&nbsp;</div>
-                                                            <div class="color_value">"tips.html"</div>
-                                                            <div class="color_other">:</div>
-                                                </div>                                                
+                                                        <div class="color_value">"tips.html"</div>
+                                                        <div class="color_other">:</div>
+                                                </div>
                                                 <div class="di_flex jc_left tab8 wrap mg_y2px">
                                                         <div class="color_function">break</div>
                                                         <div class="color_other">;</div>
@@ -613,7 +569,7 @@
                                                         <div class="color_other">{</div>
                                                 </div>
                                                 <div class="di_flex jc_left tab12 wrap mg_y2px">
-                                                        <div class="color_operator">if&nbsp;</div>   
+                                                        <div class="color_operator">if&nbsp;</div>
                                                         <div class="color_other">(</div>
                                                         <div class="color_sign">et</div>
                                                         <div class="color_other">.</div>
@@ -630,7 +586,7 @@
                                                         <div class="color_sign">subject</div>
                                                         <div class="color_other">[</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">]==</div>    
+                                                        <div class="color_other">]==</div>
                                                         <div class="color_variable">"geography"</div>
                                                         <div class="color_other">;</div>
                                                 </div>
@@ -640,7 +596,7 @@
                                                         <div class="color_sign">data</div>
                                                         <div class="color_other">[</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">]==</div>    
+                                                        <div class="color_other">]==</div>
                                                         <div class="color_value">6</div>
                                                         <div class="color_other">;</div>
                                                 </div>
@@ -652,7 +608,7 @@
                                                         <div class="color_function">splice</div>
                                                         <div class="color_other">(</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">7</div>
                                                         <div class="color_other">);</div>
                                                 </div>
@@ -664,17 +620,17 @@
                                                         <div class="color_function">push</div>
                                                         <div class="color_other">(</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">1</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">1</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">2</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">2</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">2</div>
                                                         <div class="color_other">);</div>
                                                 </div>
@@ -686,7 +642,7 @@
                                                         <div class="color_function">splice</div>
                                                         <div class="color_other">(</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">1</div>
                                                         <div class="color_other">);</div>
                                                 </div>
@@ -698,7 +654,7 @@
                                                         <div class="color_function">splice</div>
                                                         <div class="color_other">(</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">1</div>
                                                         <div class="color_other">);</div>
                                                 </div>
@@ -713,7 +669,7 @@
                                                         <div class="color_sign">subject</div>
                                                         <div class="color_other">[</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">]==</div>    
+                                                        <div class="color_other">]==</div>
                                                         <div class="color_variable">"mathematics"</div>
                                                         <div class="color_other">;</div>
                                                 </div>
@@ -723,7 +679,7 @@
                                                         <div class="color_sign">data</div>
                                                         <div class="color_other">[</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">]==</div>    
+                                                        <div class="color_other">]==</div>
                                                         <div class="color_value">3</div>
                                                         <div class="color_other">;</div>
                                                 </div>
@@ -735,7 +691,7 @@
                                                         <div class="color_function">splice</div>
                                                         <div class="color_other">(</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">7</div>
                                                         <div class="color_other">);</div>
                                                 </div>
@@ -747,17 +703,17 @@
                                                         <div class="color_function">push</div>
                                                         <div class="color_other">(</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">1</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">2</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">1</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">2</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">2</div>
                                                         <div class="color_other">);</div>
                                                 </div>
@@ -769,12 +725,14 @@
                                                         <div class="color_function">splice</div>
                                                         <div class="color_other">(</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">0</div>
                                                         <div class="color_other">,</div>
                                                 </div>
                                                 <div class="di_flex jc_left tab14 wrap mg_y2px">
-                                                        <div class="color_variable">'https://cdn.pixabay.com/photo/2012/12/27/19/41/halloween-72939_960_720.jpg'</div>                     
+                                                        <div class="color_variable">
+                                                                'https://cdn.pixabay.com/photo/2012/12/27/19/41/halloween-72939_960_720.jpg'
+                                                        </div>
                                                         <div class="color_other">);</div>
                                                 </div>
                                                 <div class="di_flex jc_left tab14 wrap mg_y2px">
@@ -785,10 +743,10 @@
                                                         <div class="color_function">splice</div>
                                                         <div class="color_other">(</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
+                                                        <div class="color_other">,</div>
                                                         <div class="color_value">0</div>
-                                                        <div class="color_other">,</div>    
-                                                        <div class="color_variable">'image1'</div>                     
+                                                        <div class="color_other">,</div>
+                                                        <div class="color_variable">'image1'</div>
                                                         <div class="color_other">);</div>
                                                 </div>
                                                 <div class="di_flex jc_left tab12 mg_y2px">
@@ -824,11 +782,13 @@
                                 </div>
                                 <div class="di_flex jc_left tab2 wrap">
                                         • In this example, parameter 'page' is used.<br>
-                                        • When addlistener() is executed within render(), the HTML filename is used as an argument.<br>
-                                           &nbsp;&nbsp;So, you can specify an event-handler for the HTML file.<br>
-                                        • With this filename, you can specify event-handlers for each page like above.<br>
+                                        • When addlistener() is executed within render(), the HTML filename is used as
+                                        an argument.<br>
+                                        &nbsp;&nbsp;So, you can specify an event-handler for the HTML file.<br>
+                                        • With this filename, you can specify event-handlers for each page like
+                                        above.<br>
                                 </div>
-                                
+
                         </div>
 
                         <div class="di_block relative w100per fs20 fw700 color_function">
@@ -838,50 +798,62 @@
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_brace">sync</span>
                                         <span class="color_other">(</span>
-                                        <span class="color_value">event</span>                                        
+                                        <span class="color_value">"body"</span>
                                         <span class="color_other">)</span>
                                 </div>
                         </div>
                         <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
-                                <div class="di_flex jc_left tab2 wrap"> 
+                                <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_function fw700">What it does:&nbsp;</span>
                                         <span>refresh all the elements that has templates on current page</span>
                                 </div>
-                                <div class="di_block bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
+                                <div
+                                        class="di_block bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
                                         <div class="di_flex jc_left tab2 wrap">
                                                 <span class="color_brace">sync</span>
                                                 <span class="color_other">(</span>
                                                 <span class="color_other">)</span>
                                         </div>
-                                </div>                                
-                                <div class="di_flex jc_left tab2 wrap mg_y2px"> 
-                                        <span>• To refresh templates when variables change from click, mouseover, and other events,<br>
+                                </div>
+                                <div class="di_flex jc_left tab2 wrap mg_y2px">
+                                        <span>• To refresh templates when variables change from click, mouseover, and
+                                                other events,<br>
                                                 &nbsp;&nbsp;add this function in the event-handling codes.</span>
-                                </div>                                
-                                <div class="di_flex jc_left tab2 wrap mg_y2px"> 
-                                        <span class="color_tag">• It refreshes all the templates of not only values but also if else / while blocks. </span>
-                                </div>                                
-                                <div class="di_flex jc_left tab2 wrap mg_y2px"> 
+                                </div>
+                                <div class="di_flex jc_left tab2 wrap mg_y2px">
+                                        <span class="color_tag">
+                                                • refreshes all the templates in HTML including control templates like
+                                                for, if, while, and so on.<br>
+                                                • refreshes all the templates in CSS
+                                        </span>
+                                </div>
+                                <div class="di_flex jc_left tab2 wrap mg_y2px">
                                         <span>&nbsp;&nbsp;(HTML tags would be rendered accordingly)</span>
                                 </div>
-                                <div class="di_flex jc_left tab2 wrap mg_y2px"> 
-                                        <span>• Of course, syncTemplate() should be executed after variables change</span>
-                                </div>                                
+                                <div class="di_flex jc_left tab2 wrap mg_y2px">
+                                        <span>• Of course, sync() should be executed after variables change</span>
+                                </div>
                                 <br>
-                                <div class="di_flex jc_left tab2 wrap"> 
+                                <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_function fw700">Parameter: &nbsp;</span>
                                 </div>
                                 <div class="di_flex jc_left tab2 wrap">
                                         <span class="color_other">•&nbsp;</span>
-                                        <span class="color_value fw700">event</span>
-                                        <span>: event object</span>
+                                        <span class="color_value fw700">"body"</span>
+                                        <span>: string</span>
                                 </div>
-                                <br>          
+                                <br>
                                 <div class="di_flex jc_left tab2 wrap">
-                                        <span class="tab2">• event that is passed for 'INPUT' tag<br>&nbsp;&nbsp;(use this parameter only to pass event object from &lt;INPUT&gt; tag)</span>
+                                        <span class="tab2">
+                                                • If you omit this, sync() will refresh all the templates of HTML and
+                                                CSS.<br>
+                                                • In case there is no template in CSS, you can speed up refereshing
+                                                templates.
+                                        </span>
                                 </div>
-                                <div class="di_block bg_black w100per-tab4 mg_x20px br_5px pd_a20px mg_y10px bd_all_1p_bbb">
-                                        <div class="di_flex jc_left tab2 wrap">                                         
+                                <div
+                                        class="di_block bg_black w100per-tab4 mg_x20px br_5px pd_a20px mg_y10px bd_all_1p_bbb">
+                                        <div class="di_flex jc_left tab2 wrap">
                                                 <div class="color_other">&lt; </div>
                                                 <div class="color_tag">input&nbsp; </div>
                                                 <div class="color_attr">type</div>
@@ -896,28 +868,29 @@
                                                 <div class="color_attr">oninput</div>
                                                 <div class="color_sign">= </div>
                                                 <div class="color_value">"</div>
-                                                <div class="color_attr">etm</div>                 
+                                                <div class="color_attr">etm</div>
                                                 <div class="color_other">.</div>
                                                 <div class="color_function">sync</div>
-                                                <div class="color_value">(</div>
-                                                <div class="color_operator">event</div>
-                                                <div class="color_value">)</div>                    
-                                                <div class="color_value">"</div>                       
+                                                <div class="color_value">()</div>
+                                                <div class="color_value">"</div>
                                                 <div class="color_other">&gt; </div>
                                         </div>
                                         <div class="di_flex jc_left tab2 wrap mg_y2px">
                                                 <div class="color_other">&nbsp;</div>
                                         </div>
                                         <div class="di_flex jc_left tab2 wrap mg_y2px">
-                                                <div class="color_white">ABOVE: 'oninput' event-handler inside &lt;INPUT&gt; tag</div>
-                                        </div>                
+                                                <div class="color_white">ABOVE: 'oninput' event-handler inside
+                                                        &lt;INPUT&gt; tag</div>
+                                        </div>
                                         <div class="di_flex jc_left tab2 wrap mg_y2px">
-                                                <div class="color_white">BELOW: seperate event-handler inside &lt;script&gt; tag instead of script inside &lt;INPUT&gt; tag</div>
-                                        </div>                                
+                                                <div class="color_white">BELOW: seperate event-handler inside
+                                                        &lt;script&gt; tag instead of script inside &lt;INPUT&gt; tag
+                                                </div>
+                                        </div>
                                         <div class="di_flex jc_left tab2 wrap mg_y2px">
                                                 <div class="color_other">&nbsp;</div>
                                         </div>
-                                                <div class="di_flex jc_left tab2 wrap mg_y2px">
+                                        <div class="di_flex jc_left tab2 wrap mg_y2px">
                                                 <div class="color_sign">document</div>
                                                 <div class="color_other">.</div>
                                                 <div class="color_function">querySelector</div>
@@ -927,29 +900,29 @@
                                                 <div class="color_function">addEventListener</div>
                                                 <div class="color_other">(</div>
                                                 <div class="color_value">'input'</div>
-                                                <div class="color_other">,</div>                    
-                                                <div class="color_other">(</div>
-                                                <div class="color_variable">event</div>
-                                                <div class="color_other">)</div>
+                                                <div class="color_other">,</div>
+                                                <div class="color_other">()</div>
                                                 <div class="color_operator">&nbsp;=>&nbsp;</div>
                                                 <div class="color_other">{</div>
-                                                <div class="color_attr">etm</div>                 
-                                                <div class="color_other">.</div>                                                                            
+                                                <div class="color_attr">etm</div>
+                                                <div class="color_other">.</div>
                                                 <div class="color_function">sync</div>
                                                 <div class="color_other">(</div>
                                                 <div class="color_variable">event</div>
                                                 <div class="color_other">)&nbsp;</div>
                                                 <div class="color_other">});</div>
-                                        </div>                                                                        
+                                        </div>
                                 </div>
-                                <div class="di_flex jc_left tab4 wrap"> 
-                                        <span class="color_tag">Set an attribute "data-sync" to a variable name as above.</span><br>
-                                        <span class="color_tag">Then, value of &lt;input&gt; tag will be input to the variable.</span>
-                                </div>                                
+                                <div class="di_flex jc_left tab4 wrap">
+                                        <span class="color_tag">Set an attribute "data-sync" to a variable name as
+                                                above.</span><br>
+                                        <span class="color_tag">Then, value of &lt;input&gt; tag will be input to the
+                                                variable.</span>
+                                </div>
                         </div>
                 </div>
-                <!-- section end-->   
+                <!-- section end-->
 
         </div>
-    <!-- 70% block end-->
+        <!-- 70% block end-->
 </div>

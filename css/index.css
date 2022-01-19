@@ -130,14 +130,14 @@
 .color_bbb { color: #bbb; }
 .color_555 { color: #555; }
 .color_other { color: rgb(171, 178, 191); }
-.color_tag, .color_variable { color: rgb(241, 14, 14); }
-.color_attr, .color_number { color: rgb(211, 132, 58); }
-.color_value { color: rgb(123, 195, 121); }
-.color_parent { color: rgb(79, 175, 227); }
-.color_operator { color: rgb(198, 108, 172);}
-.color_function { color: rgb(79, 175, 227); }
-.color_sign { color: rgb(86, 182, 194);}
-.color_brace { color: rgb(252,240,133); }
+.color_tag, .color_variable { color: #e63946; }
+.color_attr, .color_number { color: #eb6b40; }
+.color_value { color: #73ae4e; }
+.color_parent { color: #2b6777; }
+.color_operator { color: #b51792;}
+.color_function { color: #5bccf6; }
+.color_sign { color: #52ab98;}
+.color_brace { color: #fcde67; }
 .background_black { background-color: rgb(0,0,0); }
 .script_color { color: red; } 
 
@@ -258,6 +258,15 @@
     .title_text {
         font-size: 40px;
         line-height: 42px;
+    }
+    .w80per {
+        width: 100% !important;
+    }
+    .w70per {
+        width: 100% !important;
+    }
+    .di_flex {
+        flex-wrap: wrap;
     }
 }
 

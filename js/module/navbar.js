@@ -17,7 +17,7 @@ function activateNav() {
                 temp=navLink.getAttribute('href').substring(1);
                 et.head_title="Templates for HTML - "+temp;
                 if (temp=='index') { et.head_title="Templates for HTML - about"; }
-                if (temp.length!=0) etemplate.render({ sync_url: temp+'.html', iscope: 'body' });
+                if (temp.length!=0) etm.render({ sync_url: temp+'.html', iscope: 'body' });
             });
         } 
     });
@@ -30,7 +30,7 @@ function activateNav() {
             let firstpart = href.split('#')[0];
             window.location.href=firstpart+'#feature';
             et.head_title="Templates for HTML - feature";
-            etemplate.render({
+            etm.render({
                 sync_url: `feature.html`,
                 scrollto: {id:itemId, block:"center"},
                 iscope: 'body'
@@ -43,14 +43,12 @@ function activateNav() {
     hamburgers.forEach(hamburger=>{
         hamburger.addEventListener('click',()=>{
             hamburger.classList.toggle('active');
-            let containerFluids=document.querySelectorAll('.container-fluid');
-            containerFluids.forEach(containerFluid=> {
-                if (containerFluid.style. display=='none') {
-                        containerFluid.style. display='block';
-                    } else {
-                        containerFluid.style. display='none';
-                    }
-            });
+            if (hamburger.classList[1]==undefined) {
+                document.querySelector('.container-fluid').style.display="none";
+            } else {
+                document.querySelector('.container-fluid').style.display="block";
+            }
+
         });
     });
 
@@ -77,16 +75,16 @@ function activateNav() {
             if (href.includes('#') && lastpart.trim().length!=0) {
                 if (lastpart=="index") { temp="about"} else { temp=lastpart; }
                 et.head_title="Templates for HTML - "+temp;               
-                etemplate.render({ sync_url:`${lastpart}.html`, iscope: 'body' });
+                etm.render({ sync_url:`${lastpart}.html`, iscope: 'body' });
             } else {
                 if (et.start_url!==undefined) { 
                     temp=et.start_url.split('.')[0];
                     et.head_title="Templates for HTML - "+temp;
-                    etemplate.render({ sync_url: et.start_url, iscope: 'body' });
+                    etm.render({ sync_url: et.start_url, iscope: 'body' });
                 }
                 else {
                     et.head_title="Templates for HTML - about";
-                    etemplate.render({ sync_url: 'index.html', iscope: 'body' });
+                    etm.render({ sync_url: 'index.html', iscope: 'body' });
                 }
             }
         }
