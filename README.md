@@ -80,7 +80,7 @@ etm.render({
         
 * class name to specify elements to be re-rendered when sync() is executed.
 * If you omit this, the class name _"et_sync"_ will be added to parent elements of templates or template blocks.
-* If there is no parent element, just before the template, <span> tag will be added as a parent element.
+* If there is no parent element, just before the template, _span_ tag will be added as a parent element.
 * If you don't want this _span_ tag, surround templates with a tag that you want, such as _div_ tag.
 * In case a template is used in the attribute of tag, the class name will be added to the tag, itself.
 ```
