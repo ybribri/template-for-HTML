@@ -1,0 +1,5 @@
+.imported {
+    display: block;
+    width: 100%;
+    height: <%= abc %>;
+}

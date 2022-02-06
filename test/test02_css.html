@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= titleText %>
+    </title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./css/test.css">
+    <script src="../js/etemplate.js"></script>
+
+    <style>
+        .ggg {
+            width: 800px;
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="abc">
+        <span>nothing</span>
+        <div>
+            background-color: <%= bg_color %><br>
+            font-color: <%= font_color %><br>
+            width: <%= (abc_width+100)+"px" %><br>
+            height: <%= abc_width+"px" %><br>
+            <br>
+            if screen width is less than 800px,<br>
+            width: <%= (abc_width)+"px" %><br>
+            height: <%= (abc_width+200)+"px" %>
+        </div>
+
+    </div>
+    <button id="push">click</button>
+</body>
+
+<script>
+    let titleText = "Hello World!";
+    let bg_color = "#555";
+    let font_color = "rgb(6, 189, 189)";
+    let abc_width = 200;
+    let iterateNo = 3;
+    let scale1 = 0.5;
+    let abc = "30px";
+    const etm = new eTemplate();
+    etm.render({ iScope: 'whole' })
+        .then(() => {
+            document.querySelector('#push').addEventListener('click', (event) => {
+                if (bg_color == "#555") {
+                    font_color = "rgb(80,90,120)";
+                    bg_color = "#ddd";
+                    abc_width = 300;
+                    iterateNo = 5;
+                    etm.sync();
+                } else {
+                    font_color = "rgb(6, 189, 189)";
+                    bg_color = "#555";
+                    abc_width = 200;
+                    iterateNo = 3;
+                    etm.sync();
+                }
+            });
+
+        });
+
+</script>
+
+</html>

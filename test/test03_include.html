@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple include test</title>
+    <script src="../js/etemplate.js"></script>
+    <style>
+        body {
+            display: none;
+        }
+        .second {
+            padding-left: 20px;
+        }
+
+        .color {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>test03_include.html: include _wrap_header.html</div>
+    <div class="second"><% include("/module/_wrap_header.html") %></div>
+    <div>test03_include.html: include _wrap_main.html</div>
+    <div class="second"><% include("/module/_wrap_main.html") %></div>
+
+    <script>
+        const etm = new eTemplate();
+        let i=10;
+        etm.render();
+    </script>
+</body>
+</html>

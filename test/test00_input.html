@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template literals for HTML</title>
-    <script src="./js/etemplate.min.js"></script>
+    <script src="../js/etemplate.js"></script>
 </head>
 
 <body>
     <div class="main_wrapper">
         <input id="input1" type="number" value="<%= input_no %>" data-sync="input_no">
         <ul>
-            <% for(i=0; i<input_no; i++) { %>
+            <% for(let i=0; i<input_no; i++) { %>
                 <li><%= data %></li>
             <% } %>
         </ul>
@@ -21,10 +21,11 @@
 
 <script>
     let input_no=1;
-    let data="<span>hello world!!</span>";
+    let data="<span>Hello World!</span>";
+    let etm=new eTemplate();
 
-    function addListener() {
-        document.querySelector('#input1').addEventListener('input', (event) => {
+    etm.render().then(()=>{
+        document.querySelector('#input1').addEventListener('input', () => {
             let number=(event.target.valueAsNumber);
             if (number<1) {
                 data='no hello?';
@@ -38,11 +39,9 @@
                 data='Hello World!';
                 document.querySelector('ul').style.color="black";
             }
-            syncTemplate(event);
+            etm.sync();
         })
-    }
-    
-    eTemplate(); 
+    }); 
     
 </script>
 

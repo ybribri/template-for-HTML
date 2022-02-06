@@ -1,0 +1,55 @@
+:root {
+    --scale1: <%= scale1 %>;
+}
+
+@font-face { 
+    font-family: MyHelvetica;
+    src: local("Helvetica Neue Bold"),
+    local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
+    font-weight: bold;
+}
+
+.abc {
+    display: block;
+    width: <%= (abc_width+100)+"px" %>;
+    height: <%= abc_width+"px" %>;
+    background-color: <%= bg_color %>;
+    color: <%= font_color %>;
+    margin: 0;
+    font-size: 13px;
+}
+
+<% for(let i=1; i<iterateNo; i++) { %>
+    .added:nth-child(<%= i %>) {
+        padding-left: <%= (i*20)+"px" %>;
+    }
+<% } %>
+
+@keyframes sk-stretchdelay {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(<%= scale1 %>);
+    }
+
+    20% {
+        transform: scaleY(1.0);
+    }
+}
+
+@import "/css/_imported.css";
+
+@media (max-width: 800px) {
+    .small-tomato {
+      background-color: tomato;
+    }
+
+    .abc {
+        width: <%= abc_width %>px;
+        <% if(abc_width>200) { %>
+            height: <%= (abc_width+200)+"px" %>
+        <% } %>
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template literals for HTML</title>
+    <script src="../js/etemplate.js"></script>
+</head>
+
+<body>
+
+    <div class="main_wrapper">
+        <%= title %>
+        <br>
+        <br>
+        <div class="header">
+            <% include('/module/_wrap_header.html') %>
+        </div>
+        <br>
+        <span>Input number (0 - 20): &nbsp;</span><input type="number" min="0" max="20" data-sync="input_no" value="<%= input_no %>">
+        <br>
+        <div class="main">
+            <% for (let i=0; i<input_no; i++) { %> 
+                <% include('/module/_wrap_main.html') %>
+            <% } %>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    let title="&lt; this is test! &gt;";
+    let input_no=1;
+    let etm=new eTemplate();
+
+    etm.render().then(()=> {
+        document.querySelector('input').addEventListener('input',()=> {
+            let input_value=document.querySelector('input').value;
+            document.querySelector('input').value = input_value>20 ? 20 : input_value<0 ? 0 : input_value;
+            etm.sync();
+        });
+        let docs=document.createDocumentFragment();
+        let cDiv=document.createElement('div');
+        cDiv.className="added";
+        docs.append(cDiv);
+        document.querySelector('.main_wrapper').appendChild(docs);
+    }); 
+    
+
+</script>
+
+</html>
