@@ -78,8 +78,59 @@
                     • Browser's previous or next button doesn't trigger click event even though hash is changed.<br>
                     &nbsp;&nbsp; You can handle it as below.
                 </div>
-            </div>  
+            </div>
+            
+            
+
+
+            document.onmouseover = function () {
+                window.innerDocClick = true;
+            };
+            document.onmouseleave = function () {
+                window.innerDocClick = false;
+            };
+
+
+
             <div class="bg_black br_5px pd_a10px mg_y10px">
+                <div class="di_flex jc_left tab2 wrap">
+                    <div class="color_sign">document</div>
+                    <div class="color_other">.</div>
+                    <div class="color_brace">onmouseover</div>
+                    <div class="color_other">&nbsp;=&nbsp;</div>
+                    <div class="color_function">function</div>
+                    <div class="color_other">() {</div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap">
+                    <div class="color_sign">window</div>
+                    <div class="color_other">.</div>                                        
+                    <div class="color_sign">innerDocClick</div>
+                    <div class="color_other">&nbsp;=&nbsp;</div>
+                    <div class="color_number">true</div>
+                    <div class="color_other">;</div>                    
+                </div>
+                <div class="di_flex jc_left tab2 wrap">
+                    <div class="color_other">}</div>
+                </div>
+                <div class="di_flex jc_left tab2 wrap">
+                    <div class="color_sign">document</div>
+                    <div class="color_other">.</div>
+                    <div class="color_brace">onmouseleave</div>
+                    <div class="color_other">&nbsp;=&nbsp;</div>
+                    <div class="color_function">function</div>
+                    <div class="color_other">() {</div>
+                </div>
+                <div class="di_flex jc_left tab4 wrap">
+                    <div class="color_sign">window</div>
+                    <div class="color_other">.</div>                                        
+                    <div class="color_sign">innerDocClick</div>
+                    <div class="color_other">&nbsp;=&nbsp;</div>
+                    <div class="color_number">false</div>
+                    <div class="color_other">;</div>                    
+                </div>
+                <div class="di_flex jc_left tab2 wrap">
+                    <div class="color_other">}</div>
+                </div>
                 <div class="di_flex jc_left tab2 wrap">
                     <div class="color_sign">window</div>
                     <div class="color_other">.</div>
