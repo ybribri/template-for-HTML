@@ -168,7 +168,7 @@
             </div>
             <div class="bg_black br_5px pd_a10px mg_y20px">        
                 <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
-                    <%%  for(var i=0; i&lt;et.noPic; i++){ %>
+                    <%%  for(let i=0; i&lt;et.noPic; i++){ %>
                 </div>
                 <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
                     <div class="color_other">&lt;</div>
@@ -259,7 +259,7 @@
 
             <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
                 <div class="di_flex jc_center tab2 wrap ">
-                    <%  for(var i=0; i<et.noPic; i++){ %>
+                    <%  for(let i=0; i<et.noPic; i++){ %>
                         <div class="img">
                             <img src="<%= et.imgSrc[i] %>">
                             <div class="img_text">
@@ -359,7 +359,7 @@
             <div class="bg_black br_5px pd_a10px mg_y20px">        
                 
                 <div class="di_flex jc_left tab2 wrap mg_y2px color_other">
-                    <%%  for(var i=0; i&lt;et.rows.length; i++){ %>
+                    <%%  for(let i=0; i&lt;et.rows.length; i++){ %>
                 </div>
                 <div class="di_flex jc_left tab4 wrap mg_y2px color_other">
                     <%% if(et.rows[i]==0) { %>
@@ -443,7 +443,7 @@
 
             <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
                 <div class="for jc_center tab2 wrap"> 
-                    <% for(var i=0; i<et.rows.length; i++){ %>
+                    <% for(let i=0; i<et.rows.length; i++){ %>
                         <% if(et.rows[i]==0){ %>
                             <div class="small_circle_grid" style="background-color: gray"> 
                             </div>

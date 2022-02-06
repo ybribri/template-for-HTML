@@ -24,7 +24,7 @@
 .borderbottom_1px_bbb { border-bottom: 1px solid #bbb; }
 
 .bg_plant {
-    background-image: url(../img/laptop.jpg);
+    background-image: url(./img/laptop.jpg);
     background-repeat: no-repeat;
     background-position: right;
 }

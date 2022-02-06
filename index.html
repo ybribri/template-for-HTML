@@ -9,7 +9,9 @@
         <link rel="shortcut icon" href="#">
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/index.css">
-        <script src="./js/etemplate.1.4.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@300;400;500&family=Yantramanav:wght@100;300;400&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+        <script src="./js/etemplate.js"></script>
         <script src="./js/module/eventlistener.js"></script>
         <script src="./js/module/navbar.js"></script>
 </head>
@@ -43,10 +45,7 @@
         };
 
         const etm = new eTemplate();
-        etm.render({ iscope: 'body' });
-        // etemplate.ready(function(){
-        //         console.log(document.querySelector('.title_text').innerHTML);
-        // });        
+        etm.render();
 
 </script>
 

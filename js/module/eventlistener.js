@@ -15,7 +15,9 @@ function addListener(page) {
             });
             document.querySelector('#btn6').addEventListener('click', () => {
                 let addNumber=document.querySelector('#btn5').value;
-                if (addNumber=='' || addNumber>100 || addNumber<0 ) { return; }
+                if (addNumber=='') { return; }
+                if ( addNumber>100 ) { addNumber='too big'; }
+                if ( addNumber<0 ) { addNumber='too small'; }
                 et.list.push(addNumber);
                 etm.sync();
             });

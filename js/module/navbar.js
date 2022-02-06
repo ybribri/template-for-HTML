@@ -17,7 +17,7 @@ function activateNav() {
                 temp=navLink.getAttribute('href').substring(1);
                 et.head_title="Templates for HTML - "+temp;
                 if (temp=='index') { et.head_title="Templates for HTML - about"; }
-                if (temp.length!=0) etm.render({ sync_url: temp+'.html', iscope: 'body' });
+                if (temp.length!=0) etm.render({ syncUrl: temp+'.html' });
             });
         } 
     });
@@ -31,9 +31,8 @@ function activateNav() {
             window.location.href=firstpart+'#feature';
             et.head_title="Templates for HTML - feature";
             etm.render({
-                sync_url: `feature.html`,
-                scrollto: {id:itemId, block:"center"},
-                iscope: 'body'
+                syncUrl: `feature.html`,
+                scrollTo: {id:itemId, block:"center"}
             });
         });
     });
@@ -75,16 +74,16 @@ function activateNav() {
             if (href.includes('#') && lastpart.trim().length!=0) {
                 if (lastpart=="index") { temp="about"} else { temp=lastpart; }
                 et.head_title="Templates for HTML - "+temp;               
-                etm.render({ sync_url:`${lastpart}.html`, iscope: 'body' });
+                etm.render({ syncUrl:`${lastpart}.html` });
             } else {
                 if (et.start_url!==undefined) { 
                     temp=et.start_url.split('.')[0];
                     et.head_title="Templates for HTML - "+temp;
-                    etm.render({ sync_url: et.start_url, iscope: 'body' });
+                    etm.render({ syncUrl: et.start_url });
                 }
                 else {
                     et.head_title="Templates for HTML - about";
-                    etm.render({ sync_url: 'index.html', iscope: 'body' });
+                    etm.render({ syncUrl: 'index.html' });
                 }
             }
         }
