@@ -14,9 +14,11 @@
 <%%   Output a literal '<%'
 %>    End of tag
 
-      <% include(' ... path/filename.html ... ') %>
+    <%  include(' ... path/filename.html ... ') %>
+    @import " ... path/filename.css";
 ```
-* modules can be included upto three levels as below.
+* templates can be used also in imported css files
+* HTML modules and CSS files can be nested multiple levels.
 
 ```
     feature.html >  _header.html
@@ -41,9 +43,22 @@
     width: <%= abc_width %>
     color: <%= abc_color %>
 }
+
+.def {
+    <% if (condition==true) { %>
+        color: <%= color1 %>
+    <% } else { %>
+        color: <%= color2 %>
+    <% } %>
+}
+
+<% for(let i=1; i<iterateNo; i++) { %>
+    .added:nth-child(<%= i %>) {
+        padding-left: <%= (i*20)+"px" %>;
+    }
+<% } %>
 ```
 - templates inside _style_ tag or linked CSS files
-- Only <%= %>, simple template is available for CSS
 
 
 ### render() and parameters
@@ -110,7 +125,7 @@ sync("body");
 ```
       
 * It refreshes all the templates of not only **values** but also **if, if else, for, forEach, switch, while.. blocks**.
-* HTML tags inside template statements will be rendered accordingly.
+* HTML elements and CSS styles with template statements will be rendered accordingly.
 
 #### **Argument**
 * This argument is optional.
@@ -141,14 +156,14 @@ document.querySelector('input').addEventListener('input',() => { etm.sync() });
 `function addListener() { ... event handler code ... }`
 
 * If you want to add event-handlers to elements affected by templates scripts, like rendered tags by if, or for...
-* Every time render() or sync() is executed, the rendered or refreshed elements are refreshed and lose their event-handlers.
+* Every time render() or sync() is executed, the rendered or refreshed elements lose their event-handlers.
 * Event-handlers declared in addListener() will be activated automatically after render() or sync()
 * **Don't insert event-handlers of other elements that are not affected by template scripts. It'll add the same event-handler to the element multiple times.**
 
 > For other cases, see below.
       
 ```
-etm.render()).then(() => {
+etm.render().then(() => {
     ... add event-handlers here or call a function that has event-handlers ...
 });
 ```
