@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/etemplate.1.7.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            The list will be changed in 3 seconds
+        </div>
+        <div class="data">
+            << for(let i=0; i<itNo; i++) { >>
+                <div>
+                    <<=i>>
+                </div>
+            << } >>
+        </div>
+        <div>
+            Count of list is&nbsp;<<=itNo>>
+        </div>        
+    </div>
+
+    <script>
+        let itNo=5;
+        const etm = new eTemplate();
+        etm.render({ openDelimiter: "<<", closeDelimiter: ">>" });
+        setTimeout(function(){
+            itNo=3;
+            etm.sync();
+        }, 3000);
+    </script>
+</body>
+</html>

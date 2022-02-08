@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/etemplate.1.7.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+
+    </div>
+
+    <script>
+        let htmlText=`
+        <div class="data">
+            <% for(let i=0; i<itNo; i++) { %>
+                <div>
+                    <%= (i==0?"zero":i) %>
+                </div>
+            <% } %>
+        </div>`;
+        let cssText=`
+            <% for(let i=1; i<itNo; i++) { %>
+            .test:nth-child(<%= i %>) {
+                padding-left: <%= (i*20)+"px" %>;
+            }
+            <% } %>
+        `;
+
+        let itNo = 5;
+        let bg_color = "#555";
+        let font_color = "rgb(6, 189, 189)";
+        let abc_width = 200;
+        let iterateNo = 3;
+        let scale1 = 0.5;
+        let abc = "30px";
+
+        const etm = new eTemplate();
+        etm.renderPart(htmlText, 'html').then(result => {
+            document.querySelector('.wrapper').insertAdjacentHTML("afterbegin", "rendering html"+result.domText);
+        });
+        etm.renderPart("test05_imported.html", 'html_path').then(result => {
+            document.querySelector('.wrapper').insertAdjacentHTML("beforeend", "<br>rendering html file"+result.domText);
+        });
+        etm.renderPart(cssText, 'css').then(result => {
+            etm.appendCss(result);
+        });
+        etm.renderPart("/css/test.css", 'css_path').then(result => {
+            etm.appendCss(result);
+        });
+
+    </script>
+</body>
+</html>
