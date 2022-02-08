@@ -61,38 +61,21 @@
 ```
 - templates inside _style_ tag or linked CSS files
 
+### eTemplate()
+> **declare eTemplate()**
 
-### render() and parameters
-> **Render all the templates in HTML and CSS including html modules and linked CSS files**
-    
 ```
-const etm=new eTemplate();
-
-etm.render({
-    sync_url: "path", 
-    start_url: "path", 
-    scrollto: { id: "id", block: "start | center | end" },
-    sync_type: "default: element | whole",
-    iscope: default: null | "body"
+const etm = new  eTemplate({
+    syncClass: default: "et_sync",
+    openDelimiter: default: "<%" | "two characters", 
+    closeDelimiter: default: "%>" | "two characters"
 });
 ```
-> **eTemplate doesn't accept data. Just declare variables which is used in templates before you execute render()**
 
 #### **Arguments**
 * All the arguments are optional.
 
-> **sync_url** : string  `sync_url: "/feature.html"`
-
-* path of html file to replace current html with (optional)
-* Use this parameter if all the html files are rendered in single page.
-* If you omit this, render() find and render start_url, in case there is no start_url it will render current html file.
-
-> **scrollto** : object  `scrollto: { id: "id", block: "start | center | end" }`
-
-* **id** : id of element to scroll to inside the html file of the second argument, sync_url
-* **block** : vertical alignment of the element. One of "start", "center", or "end"
-
-> **sync_class** : string  `sync_class: "default: et_sync"`
+> **syncClass** : string  `syncClass: default: "et_sync"`
         
 * class name to specify elements to be re-rendered when sync() is executed.
 * If you omit this, the class name _"et_sync"_ will be added to parent elements of templates or template blocks.
@@ -102,8 +85,47 @@ etm.render({
 ```
 <Input class="et_sync" type="text" value="<%= data%> data-sync="data">
 ```
+
+> **openDelimiter** : string  `openDelimiter: default: "<%"`
+        
+* should be two characters that can be easily distinguished from HTML or CSS.
+* open delimiter for comment will be set as "openDelimiter"+"%".
+
+> **closeDelimiter** : string  `closeDelimiter: default: "%>"`
+        
+* should be two characters that can be easily distinguished from HTML or CSS.
+
+
+### render() and parameters
+> **Render all the templates in HTML and CSS including html modules and linked CSS files**
+    
+```
+const etm=new eTemplate();
+
+etm.render({
+    syncUrl: "path", 
+    startUrl: "path", 
+    scrollObj: { id: "id", block: "start | center | end" },
+    iScope: default: null | "body"
+});
+```
+> **eTemplate doesn't accept data. Just declare variables which is used in templates before you execute render()**
+
+#### **Arguments**
+* All the arguments are optional.
+
+> **syncUrl** : string  `syncUrl: "/feature.html"`
+
+* path of html file to replace current html with (optional)
+* Use this parameter if all the html files are rendered in single page.
+* If you omit this, render() find and render start_url, in case there is no start_url it will render current html file.
+
+> **scrollObj** : object  `scrollObj: { id: "id", block: "start | center | end" }`
+
+* **id** : id of element to scroll to inside the html file of the second argument, sync_url
+* **block** : vertical alignment of the element. One of "start", "center", or "end"
                                                                      
-> **iscope** : string  `iscope: "body"`
+> **iScope** : string  `iScope: "body"`
 
 * render() finds out linked CSS files and _style_ tags, and check templates inside them. Even though there is no template, all CSS elements have to be checked for templates, and it might takes a bit.
 * If there is no template in CSS files, you can reduce a delay by setting this parameter.
@@ -125,8 +147,8 @@ sync("body");
    });
 ```
       
-* It refreshes all the templates of not only **values** but also **if, if else, for, forEach, switch, while.. blocks**.
-* HTML elements and CSS styles with template statements will be rendered accordingly.
+* It refreshes only templates that contain changed variables, not only **simple values template** but also **if, if else, for, forEach, switch, while.. blocks**.
+* HTML elements and CSS styles with template statements will be rendered.
 
 #### **Argument**
 * This argument is optional.

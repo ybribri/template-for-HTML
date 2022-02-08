@@ -241,6 +241,133 @@
             <div class="di_block relative w100per ta_center h50p fs25 fw700 color_value pd_y10x0">
                 FUNCTION
             </div>
+
+            <div class="di_block relative w100per fs20 fw700 color_function">
+                eTemplate()
+            </div>
+            <div class="bg_black br_5px pd_a10px mg_y10px">
+                <div class="di_flex jc_left tab4">
+                    <span class="color_operator">const&nbsp;</span>
+                    <span class="color_brace">etm</span>
+                    <span class="color_sign">=</span>
+                    <span class="color_operator">new&nbsp;</span>                    
+                    <span class="color_brace">eTemplate</span>
+                    <span class="color_other">({</span>
+                </div>
+                <div class="di_flex jc_left tab6 wrap">
+                    <span class="color_value">syncClass</span>
+                    <span class="color_other">:&nbsp;</span>
+                    <span class="color_brace">default: "et_sync"</span>
+                    <span class="color_other">,</span>
+                </div>                
+                <div class="di_flex jc_left tab6 wrap">
+                    <span class="color_value">openDelimiter</span>
+                    <span class="color_other">:&nbsp;</span>
+                    <span class="color_brace">default: "<%" | "two characters"</span>
+                    <span class="color_other">,&nbsp;</span>
+                </div>
+                <div class="di_flex jc_left tab6 wrap">
+                    <span class="color_value">closeDelimiter</span>
+                    <span class="color_other">:&nbsp;</span>
+                    <span class="color_brace">default: "%>" | "two characters"</span>
+                </div>
+                <div class="di_flex jc_left tab4">
+                    <span class="color_other">});</span>
+                </div>
+            </div>
+            <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="color_function fw700">What it does:&nbsp;</span>
+                    <span>function to declare</span>
+                </div>
+                <br>
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="color_function fw700">Parameters: &nbsp;</span>
+                </div>
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="fw700">• All the parameters are optional</span>
+                </div>
+
+                <!-- param: syncClass -->
+                <br>
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="color_other">•&nbsp;</span>
+                    <span class="color_value fw700">syncClass</span>
+                    <span>: string</span>
+                </div>
+
+                <div class="di_flex jc_left tab2 wrap pd_a5px"></div>
+                <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px">
+                    <div class="di_flex jc_left tab2 wrap">
+                        <span class="color_value">syncClass</span>
+                        <span class="color_other">:&nbsp;</span>
+                        <span class="color_brace">"[et_sync(default)]"&nbsp;</span>
+                    </div>
+                </div>
+
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="tab2">
+                        • class name to specify elements to re-render when sync() is
+                        executed.<br>
+                        • If you omit this, the class name "et_sync" will be added to parent
+                        elements of templates or template blocks<br>
+                        • If there is no parent element, just before the template, &lt;span&gt; will be added as a parent element.<br>
+                        • If you don't want this &lt;span&gt;, surround templates with a tag that you want, such as &lt;div&gt;.<br>
+                        • In case a template is used in the attribute of tag, the class name
+                        will be added to the tag, itself.<br>
+                        (&lt;Input class="et_sync" type="text" value="&lt;%= data%&gt;
+                        data-sync="data"&gt;)
+                    </span>
+                </div>
+                <!-- param: openDelimiter -->
+                <br>
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="color_other">•&nbsp;</span>
+                    <span class="color_value fw700">openDelimiter</span>
+                    <span>: string</span>
+                </div>
+
+                <div class="di_flex jc_left tab2 wrap pd_a5px"></div>
+                <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px">
+                    <div class="di_flex jc_left tab2 wrap">
+                        <span class="color_value">openDelimiter</span>
+                        <span class="color_other">:&nbsp;</span>
+                        <span class="color_brace">"[&lt;% (default)]"&nbsp;</span>
+                    </div>
+                </div>
+
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="tab2">
+                        • should be two characters that can be easily distinguished from HTML or CSS<br>
+                        • open delimiter for comment will be set as "openDelimiter"+"%".
+                    </span>
+                </div>
+                <!-- param: closeDelimiter -->
+                <br>
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="color_other">•&nbsp;</span>
+                    <span class="color_value fw700">closeDelimiter</span>
+                    <span>: string</span>
+                </div>
+
+                <div class="di_flex jc_left tab2 wrap pd_a5px"></div>
+                <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px">
+                    <div class="di_flex jc_left tab2 wrap">
+                        <span class="color_value">closeDelimiter</span>
+                        <span class="color_other">:&nbsp;</span>
+                        <span class="color_brace">"[%&gt; (default)]"&nbsp;</span>
+                    </div>
+                </div>
+
+                <div class="di_flex jc_left tab2 wrap">
+                    <span class="tab2">
+                        • should be two characters that can be easily distinguished from HTML or CSS
+                    </span>
+                </div>
+
+            </div>
+
+
             <div class="di_block relative w100per fs20 fw700 color_function">
                 render() and parameters
             </div>
@@ -262,19 +389,19 @@
                     <span class="color_other">({</span>
                 </div>
                 <div class="di_flex jc_left tab6 wrap">
-                    <span class="color_value">sync_url</span>
+                    <span class="color_value">syncUrl</span>
                     <span class="color_other">:&nbsp;</span>
                     <span class="color_brace">"path"</span>
                     <span class="color_other">,&nbsp;</span>
                 </div>
                 <div class="di_flex jc_left tab6 wrap">
-                    <span class="color_value">start_url</span>
+                    <span class="color_value">startUrl</span>
                     <span class="color_other">:&nbsp;</span>
                     <span class="color_brace">"path"</span>
                     <span class="color_other">,&nbsp;</span>
                 </div>
                 <div class="di_flex jc_left tab6 wrap">
-                    <span class="color_value">scrollto</span>
+                    <span class="color_value">scrollObj</span>
                     <span class="color_other">: {&nbsp;</span>
                     <span class="color_value">id</span>
                     <span class="color_other">:&nbsp;</span>
@@ -287,13 +414,7 @@
                     <span class="color_other">},</span>
                 </div>
                 <div class="di_flex jc_left tab6 wrap">
-                    <span class="color_value">sync_class</span>
-                    <span class="color_other">:&nbsp;</span>
-                    <span class="color_brace">"default: et_sync"</span>
-                    <span class="color_other">,</span>
-                </div>
-                <div class="di_flex jc_left tab6 wrap">
-                    <span class="color_value">iscope</span>
+                    <span class="color_value">iScope</span>
                     <span class="color_other">:&nbsp;</span>
                     <span class="color_brace">default: '' | "body"</span>
                 </div>
@@ -301,6 +422,7 @@
                     <span class="color_other">});</span>
                 </div>
             </div>
+
             <div class="bg_white br_5px pd_a10px mg_y20px bd_all_1p_bbb">
                 <div class="di_flex jc_left tab2 wrap">
                     <span class="color_function fw700">What it does:&nbsp;</span>
@@ -315,16 +437,16 @@
                 </div>
 
 
-                <!-- param: sync_url -->
+                <!-- param: syncUrl -->
                 <br>
                 <div class="di_flex jc_left tab2 wrap">
                     <span class="color_other">•&nbsp;</span>
-                    <span class="color_value fw700">sync_url</span>
+                    <span class="color_value fw700">syncUrl</span>
                     <span>: string</span>
                 </div>
                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
                     <div class="di_flex jc_left tab2 wrap">
-                        <div class="color_value">sync_url</div>
+                        <div class="color_value">syncUrl</div>
                         <div class="color_other">: &nbsp;</div>
                         <div class="color_value">'/feature.html'</div>
                     </div>
@@ -335,20 +457,20 @@
                         • path of html file to replace current html with (optional)<br>
                         • Use this parameter if all the html files are rendered in single
                         page.<br>
-                        • If you omit this, render() find and render start_url, in case there is
-                        no start_url it will render current html file.
+                        • If you omit this, render() find and render startUrl. In case there is
+                        no startUrl either, current html file will be rendered.
                     </span>
                 </div>
-                <!-- param: start_url -->
+                <!-- param: startUrl -->
                 <br>
                 <div class="di_flex jc_left tab2 wrap">
                     <span class="color_other">•&nbsp;</span>
-                    <span class="color_value fw700">start_url</span>
+                    <span class="color_value fw700">startUrl</span>
                     <span>: string</span>
                 </div>
                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px bd_all_1p_bbb">
                     <div class="di_flex jc_left tab2 wrap">
-                        <div class="color_value">start</div>
+                        <div class="color_value">startUrl</div>
                         <div class="color_other">: &nbsp;</div>
                         <div class="color_value">'/about.html'</div>
                     </div>
@@ -358,23 +480,23 @@
                     <span class="tab2">
                         • path of html file to render firstly replacing index.html with
                         (optional)<br>
-                        • Use this parameter if no sync_url is specified and want it to replace
+                        • Use this parameter if no syncUrl is specified and want it to replace
                         index.html.<br>
                         • If you omit this, render() will regard index.html as the first html
                         file to be loaded.
                     </span>
                 </div>
-                <!-- param: scroll to -->
+                <!-- param: scrollObj -->
                 <br>
                 <div class="di_flex jc_left tab2 wrap">
                     <span class="color_other">•&nbsp;</span>
-                    <span class="color_value fw700">scrollto</span>
+                    <span class="color_value fw700">scrollObj</span>
                     <span>: object</span>
                 </div>
                 <div class="di_flex jc_left tab2 wrap pd_a5px"></div>
                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px">
                     <div class="di_flex jc_left tab2 wrap">
-                        <span class="color_value">scrollto</span>
+                        <span class="color_value">scrollObj</span>
                         <span class="color_other">: {&nbsp;</span>
                         <span class="color_value">id</span>
                         <span class="color_other">:&nbsp;</span>
@@ -394,47 +516,18 @@
                         element. One of "start", "center", or "end"
                     </span>
                 </div>
-                <!-- param: sync_class -->
+                <!-- param: iScope -->
                 <br>
                 <div class="di_flex jc_left tab2 wrap">
                     <span class="color_other">•&nbsp;</span>
-                    <span class="color_value fw700">sync_class</span>
+                    <span class="color_value fw700">iScope</span>
                     <span>: string</span>
                 </div>
 
                 <div class="di_flex jc_left tab2 wrap pd_a5px"></div>
                 <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px">
                     <div class="di_flex jc_left tab2 wrap">
-                        <span class="color_value">sync_class</span>
-                        <span class="color_other">:&nbsp;</span>
-                        <span class="color_brace">"[et_sync(default)]"&nbsp;</span>
-                    </div>
-                </div>
-
-                <div class="di_flex jc_left tab2 wrap">
-                    <span class="tab2">
-                        • class name to specify elements to re-render when sync() is
-                        executed.<br>
-                        • If you omit this, the class name "et_sync" will be added to parent
-                        elements of templates or template blocks.<br>
-                        • In case a template is used in the attribute of tag, the class name
-                        will be added to the tag, itself.<br>
-                        (&lt;Input class="et_sync" type="text" value="&lt;%= data%&gt;
-                        data-sync="data"&gt;)
-                    </span>
-                </div>
-                <!-- param: iscope -->
-                <br>
-                <div class="di_flex jc_left tab2 wrap">
-                    <span class="color_other">•&nbsp;</span>
-                    <span class="color_value fw700">iscope</span>
-                    <span>: string</span>
-                </div>
-
-                <div class="di_flex jc_left tab2 wrap pd_a5px"></div>
-                <div class="bg_black w100per-tab4 mg_x20px br_5px pd_a10px mg_y10px">
-                    <div class="di_flex jc_left tab2 wrap">
-                        <span class="color_value">iscope</span>
+                        <span class="color_value">iScope</span>
                         <span class="color_other">:&nbsp;</span>
                         <span class="color_brace">"body"&nbsp;</span>
                     </div>
@@ -446,7 +539,7 @@
                         them.<br>
                         &nbsp;&nbsp;Even though there is no template, all CSS elements have to
                         be checked for templates, and it takes a while.<br>
-                        • If there is no template in CSS files, you can reduce a delay to check
+                        • If there is no template in CSS files, you can reduce a delay for checking
                         them by setting this parameter.<br>
                         • If iscope is set to "body", render() skips checking CSS files.<br>
                     </span>
@@ -836,12 +929,12 @@
                     </div>
                 </div>
                 <div class="di_flex jc_left tab2 wrap mg_y2px">
-                    <span>• To refresh templates when variables change from click, mouseover, and
+                    <span>• To refresh templates in HTML and CSS when variables change from click, mouseover, and
                         other events, call this function in the event-handling codes.</span>
                 </div>
                 <div class="di_flex jc_left tab2 wrap mg_y2px">
                     <span class="color_tag">
-                        • refreshes all the templates in HTML and CSS including control templates like
+                        • Refreshes only the templates that are affected by changed variables including control templates like
                         for, if, while, and so on.
                     </span>
                 </div>
@@ -922,7 +1015,6 @@
                         <div class="color_other">.</div>
                         <div class="color_function">sync</div>
                         <div class="color_other">(</div>
-                        <div class="color_variable">event</div>
                         <div class="color_other">)&nbsp;</div>
                         <div class="color_other">});</div>
                     </div>
